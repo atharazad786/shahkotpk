@@ -1,0 +1,9 @@
+--- /mnt/data/shahkot_active_work/files/app/layout.php	2026-08-31 14:37:38.000000000 +0000
++++ /mnt/data/shahkot_v1386_sidebar_pkg/app/layout.php	2026-09-01 17:47:15.934722820 +0000
+@@ -1,4 +1,6 @@
+ <?php
++/* SHAHKOTPK_ADMIN_SIDEBAR_V1386_BOOTSTRAP */
++require_once __DIR__.'/admin_sidebar_global_v974.php';
+ require_once __DIR__.'/global_brand_v704.php';
+ function page_start(string $title,bool $admin=false):void{
+     global $config;

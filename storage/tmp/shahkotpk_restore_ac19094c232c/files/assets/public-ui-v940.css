@@ -1,0 +1,16 @@
+/* ShahkotPK v9.4.0 — adaptive media performance + premium cards */
+:root{--shk940-radius:20px;--shk940-shadow:0 8px 24px rgba(18,34,58,.075);--shk940-shadow-hover:0 16px 36px rgba(18,34,58,.13);--shk940-border:rgba(110,132,160,.15);--shk940-ease:cubic-bezier(.2,.8,.2,1)}
+.shk-v940-card{position:relative;overflow:hidden;border:1px solid var(--shk940-border)!important;border-radius:var(--shk940-radius)!important;box-shadow:var(--shk940-shadow)!important;background:var(--panel,#fff);transition:transform .2s var(--shk940-ease),box-shadow .2s var(--shk940-ease),border-color .2s ease!important}
+.shk-v940-card.shk-v940-deferred{content-visibility:auto;contain-intrinsic-size:360px 420px}
+@media(hover:hover) and (pointer:fine){.shk-v940-card:hover{transform:translateY(-3px);box-shadow:var(--shk940-shadow-hover)!important;border-color:rgba(80,93,245,.18)!important}}
+.shk-v940-media,.shk-v940-card>img:first-child,.shk-v940-card figure img,.shk-v940-card picture img{width:100%;aspect-ratio:4/3;object-fit:cover!important;object-position:center;display:block;background:#f4f6fa;transition:transform .22s var(--shk940-ease)}
+@media(hover:hover) and (pointer:fine){.shk-v940-card:hover .shk-v940-media,.shk-v940-card:hover>img:first-child,.shk-v940-card:hover figure img,.shk-v940-card:hover picture img{transform:scale(1.012)}}
+.shk-v940-card[data-shk-kind="product"] .shk-v940-media,.shk-v940-card[data-shk-kind="product"]>img:first-child,.shk-v940-card[data-shk-kind="product"] figure img{aspect-ratio:4/3;object-fit:cover!important;background:#f5f7fa}
+.shk-v940-card h2,.shk-v940-card h3,.shk-v940-card h4{letter-spacing:-.012em}
+.shk-v940-banner{position:relative;overflow:hidden!important;border-radius:24px!important;aspect-ratio:16/7;min-height:250px;max-height:590px;background:#081126;box-shadow:0 10px 30px rgba(10,24,51,.11)}
+.shk-v940-banner.shk-v940-deferred{content-visibility:auto;contain-intrinsic-size:720px 315px}
+.shk-v940-banner img,.shk-v940-banner picture,.shk-v940-banner picture img,.shk-v940-banner video{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block}
+html.shk-v940-save-data .shk-v940-card,html.shk-v940-save-data .shk-v940-media{transition:none!important}
+@media(max-width:900px){.shk-v940-banner{aspect-ratio:16/9;min-height:205px;border-radius:18px!important}.shk-v940-card{border-radius:17px!important}}
+@media(max-width:560px){.shk-v940-banner{min-height:172px;aspect-ratio:16/10}.shk-v940-media,.shk-v940-card>img:first-child,.shk-v940-card figure img{aspect-ratio:16/11}}
+@media(prefers-reduced-motion:reduce){.shk-v940-card,.shk-v940-card *{transition:none!important;transform:none!important}}

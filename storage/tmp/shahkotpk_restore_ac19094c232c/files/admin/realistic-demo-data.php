@@ -1,0 +1,23 @@
+<?php
+require_once __DIR__.'/../app/admin_sidebar_global_v974.php';
+require_once __DIR__.'/../app/realistic_demo_data_v1335.php';
+if(function_exists('sk1300_require_feature')) sk1300_require_feature('admin.research_demo_data');
+$msg='';$err='';$result=null;
+if($_SERVER['REQUEST_METHOD']==='POST'){
+  try{
+    if(function_exists('csrf_validate')&&!csrf_validate((string)($_POST['_csrf']??'')))throw new RuntimeException('Invalid CSRF token.');
+    if(($_POST['action']??'')==='apply'){$result=sk1335rd_apply();$msg='Verified Shahkot public-map dataset applied safely.';}
+  }catch(Throwable $e){$err=$e->getMessage();}
+}
+$p=sk1335rd_preview();$d=sk1335rd_dataset();
+?><!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Demo Data · ShahkotPK</title>
+<style>body{font-family:system-ui;background:#f4f7fb;color:#172033;margin:0}.wrap{max-width:1180px;margin:30px auto;padding:0 18px}.hero{background:linear-gradient(120deg,#0d3159,#4f46e5);color:#fff;padding:28px;border-radius:24px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.card,.panel{background:#fff;border:1px solid #dce4ef;border-radius:18px;padding:18px}.card b{font-size:28px;display:block}.muted{color:#66748b}.ok{color:#087f5b}.warn{color:#a35a00}.btn{background:#315bf3;color:white;border:0;border-radius:12px;padding:12px 18px;font-weight:700;cursor:pointer}.alert{padding:12px 14px;border-radius:12px;margin:14px 0}.good{background:#e9fbf3;color:#087f5b}.bad{background:#fff0f0;color:#a61b1b}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid #edf0f5;text-align:left;font-size:14px}@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}</style></head><body><div class="wrap">
+<div class="hero"><div style="letter-spacing:.12em;font-weight:800;font-size:12px">DATA OPERATIONS</div><h1>Shahkot Verified Demo Locations</h1><p>Replace only detectable dummy/demo rows with verified public-map Shahkot listings. Real user/content rows are preserved.</p></div>
+<?php if($msg):?><div class="alert good"><?=htmlspecialchars($msg)?></div><?php endif;?><?php if($err):?><div class="alert bad"><?=htmlspecialchars($err)?></div><?php endif;?>
+<div class="grid"><div class="card"><b><?=$p['dataset_count']?></b><span>Verified records</span></div><div class="card"><b><?=htmlspecialchars($p['target_table']?:'None')?></b><span>Detected target table</span></div><div class="card"><b><?=$p['detectable_dummy_rows']?></b><span>Safe dummy rows detected</span></div><div class="card"><b><?=$p['compatibility_score']?></b><span>Schema compatibility score</span></div></div>
+<div class="panel"><h2>Safe replacement policy</h2><p class="muted">Only rows carrying explicit demo/dummy/source markers, dummy/demo/sample slugs, or exact placeholder-style names are eligible for deletion. Existing real records are not bulk-deleted. Public phone numbers, personal emails, ratings and opening hours were intentionally not imported.</p>
+<p><b>Map data:</b> <?=count(array_filter($d['records'],fn($r)=>isset($r['latitude'],$r['longitude'])))?> / <?=$p['dataset_count']?> records include Shahkot-area coordinates. All bundled coordinates are <code>verified_public_map</code>; approximate/random coordinates are not included.</p>
+<?php if($p['safe_to_apply']):?><form method="post" onsubmit="return confirm('Replace only safely detectable dummy/demo rows and add the verified Shahkot location dataset?');"><input type="hidden" name="_csrf" value="<?=htmlspecialchars(function_exists('csrf_token')?csrf_token():'')?>"><input type="hidden" name="action" value="apply"><button class="btn">Safe Replace Dummy Data</button></form><?php else:?><p class="warn"><b>No compatible business/directory table found.</b> The updater changed nothing.</p><?php endif;?></div>
+<?php if($result):?><div class="panel"><h2>Last apply result</h2><pre><?=htmlspecialchars(json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES))?></pre></div><?php endif;?>
+<div class="panel"><h2>Dataset preview</h2><table><thead><tr><th>Name</th><th>Category</th><th>Area</th><th>Coordinate quality</th></tr></thead><tbody><?php foreach(array_slice($d['records'],0,30) as $r):?><tr><td><?=htmlspecialchars($r['name'])?></td><td><?=htmlspecialchars($r['category'])?></td><td><?=htmlspecialchars($r['address'])?></td><td><?=htmlspecialchars($r['coordinate_accuracy'])?></td></tr><?php endforeach;?></tbody></table><p class="muted">Showing first 30 of <?=$p['dataset_count']?> records.</p></div>
+</div></body></html>

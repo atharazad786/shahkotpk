@@ -1,0 +1,17 @@
+{
+  "module_key": "ai_copilot_v1100",
+  "label": "AI Copilot",
+  "url": "/admin/ai-copilot.php",
+  "icon": "\u2726",
+  "placement": "sidebar",
+  "category_key": "ai_automation",
+  "category_label": "AI & AUTOMATION",
+  "category_order": 62,
+  "subgroup_key": "assistants",
+  "subgroup_label": "Assistants",
+  "subgroup_order": 10,
+  "sort_order": 10,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "description": "Public website AI assistant, Admin Copilot, Google AI Studio and auto knowledge."
+}

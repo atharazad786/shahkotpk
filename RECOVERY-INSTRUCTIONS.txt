@@ -1,0 +1,15 @@
+SHAHKOTPK DIRECT HTTP 500 RECOVERY
+
+Purpose:
+Restore the exact PHP/front payload from the last known working v13.9.2 package after the v13.9.3 update caused HTTP 500 on both admin and frontend.
+
+IMPORTANT:
+- Do NOT run this through Admin Updater.
+- In cPanel File Manager open the ShahkotPK web root (usually public_html).
+- Upload this ZIP there and Extract over the existing files.
+- Choose overwrite/replace for files in this ZIP.
+- Do NOT delete config, storage, uploads or database.
+- Then reload / and /admin with Ctrl+F5.
+
+This package does not contain database SQL, config files, uploads or storage.
+It only restores the exact application files present in the prior working v13.9.2 updater payload.

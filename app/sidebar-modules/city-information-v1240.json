@@ -1,0 +1,18 @@
+{
+  "module_key": "city_information_v1240",
+  "label": "City Content Studio",
+  "url": "/admin/city-content-studio.php",
+  "icon": "MapPin",
+  "placement": "sidebar",
+  "category_key": "city_listings",
+  "category_label": "CITY & LISTINGS",
+  "category_order": 30,
+  "subgroup_key": "city_information",
+  "subgroup_label": "City Information",
+  "subgroup_order": 10,
+  "sort_order": 10,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "12.6.0",
+  "description": "Unified Shahkot City Guide management: animated live weather, verified facts, media, administration officers and official-source sync."
+}

@@ -1,0 +1,18 @@
+{
+  "module_key": "commerce_orders_v1230",
+  "label": "Commerce & Orders",
+  "url": "/admin/commerce-orders.php",
+  "icon": "Cart",
+  "placement": "sidebar",
+  "category_key": "customer_services",
+  "category_label": "CUSTOMER & SERVICES",
+  "category_order": 45,
+  "subgroup_key": "commerce_delivery",
+  "subgroup_label": "Commerce & Delivery",
+  "subgroup_order": 40,
+  "sort_order": 10,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "12.3.0",
+  "description": "OneCart, multi-seller checkout, order operations, delivery zones, returns and disputes."
+}

@@ -1,0 +1,145 @@
+{
+  "source_version": "11.0.2",
+  "items": [
+    {
+      "nav_key": "home",
+      "label": "Home",
+      "url": "/",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 0,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "businesses",
+      "label": "Businesses",
+      "url": "/businesses.php",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 10,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "marketplace",
+      "label": "Marketplace",
+      "url": "/marketplace.php",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 20,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "property",
+      "label": "Property",
+      "url": "/property.php",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 30,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "health",
+      "label": "Health",
+      "url": "/doctor-online.php",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 40,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "events",
+      "label": "Events",
+      "url": "/discover-v1020.php?type=events",
+      "group_key": "primary",
+      "parent_key": "",
+      "sort_order": 50,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "my_shahkot",
+      "label": "My Shahkot",
+      "url": "/my-shahkot.php",
+      "group_key": "primary",
+      "parent_key": "businesses",
+      "sort_order": 11,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "ask_shahkotpk",
+      "label": "Ask ShahkotPK",
+      "url": "/assistant-v1040.php",
+      "group_key": "primary",
+      "parent_key": "businesses",
+      "sort_order": 12,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "deals",
+      "label": "Deals & Coupons",
+      "url": "/deals-v1050.php",
+      "group_key": "primary",
+      "parent_key": "marketplace",
+      "sort_order": 21,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "compare",
+      "label": "Compare",
+      "url": "/compare-v1020.php",
+      "group_key": "primary",
+      "parent_key": "marketplace",
+      "sort_order": 22,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "favorites",
+      "label": "Favorites",
+      "url": "/favorites-v1020.php",
+      "group_key": "account",
+      "parent_key": "marketplace",
+      "sort_order": 23,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "wallet",
+      "label": "My Wallet",
+      "url": "/my-wallet-v1050.php",
+      "group_key": "account",
+      "parent_key": "marketplace",
+      "sort_order": 24,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "my_bookings",
+      "label": "My Bookings",
+      "url": "/my-bookings-v1040.php",
+      "group_key": "account",
+      "parent_key": "health",
+      "sort_order": 41,
+      "enabled": 1,
+      "priority": "secondary"
+    },
+    {
+      "nav_key": "notifications",
+      "label": "Notifications",
+      "url": "/notifications-v1020.php",
+      "group_key": "account",
+      "parent_key": "events",
+      "sort_order": 51,
+      "enabled": 1,
+      "priority": "secondary"
+    }
+  ]
+}

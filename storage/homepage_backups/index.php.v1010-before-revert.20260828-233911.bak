@@ -1,0 +1,5 @@
+<?php
+/* SHAHKOTPK_HOMEPAGE_V1010_ACTIVE */
+require __DIR__.'/app/bootstrap.php';
+require_once __DIR__.'/app/homepage_front_v1010.php';
+shp1010_render_homepage();

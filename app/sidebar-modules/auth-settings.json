@@ -1,0 +1,15 @@
+{
+  "module_key": "auth_settings",
+  "label": "Auth UI Settings",
+  "url": "/admin/auth-settings.php",
+  "icon": "🖼️",
+  "placement": "sidebar",
+  "category_key": "admin",
+  "category_label": "ADMIN",
+  "category_order": 90,
+  "sort_order": 15,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "13.8.7",
+  "description": "Configure the authentication split-screen images and logo."
+}

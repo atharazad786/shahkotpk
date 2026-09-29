@@ -1,0 +1,5 @@
+<?php
+require __DIR__.'/../../app/bootstrap.php';require_once __DIR__.'/../../app/api_v2.php';api_v2_require_enabled();
+$t=current_tenant();if(!$t)api_v2_error('Tenant context is unavailable.',503);
+$features=[];if(tenant_v5_table_exists('tenant_features')){try{$q=db()->prepare('SELECT feature_key,enabled FROM tenant_features WHERE tenant_id=? ORDER BY feature_key');$q->execute([(int)$t['id']]);foreach($q->fetchAll() as $r)$features[(string)$r['feature_key']]=(bool)$r['enabled'];}catch(Throwable $e){}}
+api_v2_ok(['tenant'=>['id'=>(int)$t['id'],'code'=>$t['code'],'name'=>$t['name'],'site_name'=>$t['site_name'],'tagline'=>$t['tagline'],'city'=>['id'=>(int)$t['city_id'],'name'=>$t['city_name'],'slug'=>$t['city_slug']],'domain'=>tenant_request_host(),'base_url'=>tenant_base_url($t),'branding'=>['logo_url'=>$t['logo_url'],'favicon_url'=>$t['favicon_url'],'primary_color'=>$t['primary_color'],'secondary_color'=>$t['secondary_color'],'accent_color'=>$t['accent_color']],'locale'=>$t['locale'],'timezone'=>$t['timezone'],'currency'=>$t['currency'],'support'=>['email'=>$t['support_email'],'phone'=>$t['support_phone']],'features'=>$features]]);

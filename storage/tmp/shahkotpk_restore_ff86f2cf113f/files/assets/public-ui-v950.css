@@ -1,0 +1,16 @@
+/* ShahkotPK v9.5.0 — smart render, stable layout, lightweight premium cards */
+:root{--shk950-radius:20px;--shk950-border:rgba(105,128,158,.15);--shk950-shadow:0 7px 22px rgba(18,34,58,.07);--shk950-shadow-hover:0 14px 32px rgba(18,34,58,.12);--shk950-ease:cubic-bezier(.2,.8,.2,1)}
+.shk-v950-card{position:relative;overflow:hidden;border:1px solid var(--shk950-border)!important;border-radius:var(--shk950-radius)!important;background:var(--panel,#fff);box-shadow:var(--shk950-shadow)!important;contain:layout paint style;transition:transform .18s var(--shk950-ease),box-shadow .18s var(--shk950-ease),border-color .18s ease!important}
+.shk-v950-card.shk-v950-deferred,.shk-v950-pending{content-visibility:auto;contain-intrinsic-size:360px 420px}
+.shk-v950-card img,.shk-v950-card figure img,.shk-v950-card picture img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover!important;object-position:center;background:linear-gradient(135deg,#f2f5f9,#e9eef5)}
+.shk-v950-card[data-shk-kind="product"] img,.shk-v950-card[data-shk-kind="product"] figure img{aspect-ratio:4/3;object-fit:cover!important}
+.shk-v950-card h2,.shk-v950-card h3,.shk-v950-card h4{letter-spacing:-.012em;text-wrap:balance}
+@media(hover:hover) and (pointer:fine){html:not(.shk-v950-lite) .shk-v950-card:hover{transform:translateY(-2px);box-shadow:var(--shk950-shadow-hover)!important;border-color:rgba(73,88,245,.18)!important}}
+.shk-v950-banner{position:relative;overflow:hidden!important;border-radius:24px!important;aspect-ratio:16/7;min-height:250px;max-height:590px;background:#081126;box-shadow:0 9px 26px rgba(10,24,51,.10);contain:layout paint style}
+.shk-v950-banner.shk-v950-deferred{content-visibility:auto;contain-intrinsic-size:720px 315px}
+.shk-v950-banner img,.shk-v950-banner picture,.shk-v950-banner picture img,.shk-v950-banner video{display:block;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+html.shk-v950-lite .shk-v950-card,html.shk-v950-lite .shk-v950-card *{transition:none!important;transform:none!important}
+html.shk-v950-save-data .shk-v950-banner{box-shadow:none}
+@media(max-width:900px){.shk-v950-banner{aspect-ratio:16/9;min-height:205px;border-radius:18px!important}.shk-v950-card{border-radius:17px!important}}
+@media(max-width:560px){.shk-v950-banner{min-height:170px;aspect-ratio:16/10}.shk-v950-card img,.shk-v950-card figure img{aspect-ratio:16/11}}
+@media(prefers-reduced-motion:reduce){.shk-v950-card,.shk-v950-card *{transition:none!important;transform:none!important}}

@@ -1,0 +1,13 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/../app/bootstrap.php';
+require_once __DIR__.'/../app/enterprise_v900.php';
+header('Content-Type: application/json; charset=utf-8');
+function mw_fail(int $c,string $m): never {http_response_code($c);echo json_encode(['ok'=>false,'error'=>$m]);exit;}
+$profileId=(int)($_GET['profile']??0);$token=(string)($_GET['token']??$_GET['hub_verify_token']??($_SERVER['HTTP_X_SHAHKOT_WEBHOOK_TOKEN']??''));if(!$profileId||$token==='')mw_fail(401,'Profile token required.');
+try{$q=db()->prepare('SELECT * FROM comm_sender_profiles_v900 WHERE id=? AND enabled=1 LIMIT 1');$q->execute([$profileId]);$p=$q->fetch();if(!$p||!hash_equals((string)$p['webhook_token_hash'],hash('sha256',$token)))mw_fail(401,'Invalid webhook credential.');$GLOBALS['V900_TENANT_OVERRIDE']=(int)$p['tenant_id'];if(!v900_rate_limit('messaging_webhook:'.$profileId,1200,3600))mw_fail(429,'Webhook rate limit exceeded.');if(($_SERVER['REQUEST_METHOD']??'GET')==='GET'&&isset($_GET['hub_challenge'])){header('Content-Type: text/plain; charset=utf-8');echo (string)$_GET['hub_challenge'];exit;}$raw=file_get_contents('php://input');$data=json_decode((string)$raw,true);if(!is_array($data))$data=$_POST;
+  $mode=(string)($_GET['mode']??'auto');
+  if($mode==='delivery'||isset($data['status'])&&isset($data['message_id'])){$ext=(string)($data['message_id']??$data['external_message_id']??'');$status=strtolower((string)($data['status']??''));v900_delivery_event($ext,$status,$data);echo json_encode(['ok'=>true,'type'=>'delivery']);exit;}
+  if((string)$p['provider_type']==='meta_cloud'&&isset($data['entry'])){foreach($data['entry'] as $entry)foreach(($entry['changes']??[]) as $change){$value=$change['value']??[];foreach(($value['statuses']??[]) as $st)v900_delivery_event((string)($st['id']??''),(string)($st['status']??''),$st);foreach(($value['messages']??[]) as $m){$from=(string)($m['from']??'');$text=(string)($m['text']['body']??'');if($from!==''&&$text!=='')v900_comm_inbound($profileId,$from,$text,(string)($m['id']??''),$from,null,$m);}}echo json_encode(['ok'=>true,'type'=>'meta_cloud']);exit;}
+  $from=(string)($data['from']??$data['sender']??$data['From']??'');$body=(string)($data['body']??$data['text']??$data['Body']??'');$ext=(string)($data['message_id']??$data['id']??$data['MessageSid']??'');$thread=(string)($data['thread_id']??$from);if($from===''||$body==='')mw_fail(422,'Inbound from/body fields are required.');$id=v900_comm_inbound($profileId,$from,$body,$ext,$thread,$data['name']??null,$data);echo json_encode(['ok'=>true,'message_id'=>$id]);
+}catch(Throwable $e){mw_fail(500,v900_clip($e->getMessage(),300));}

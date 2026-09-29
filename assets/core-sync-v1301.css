@@ -1,0 +1,3 @@
+:root{--sk-brand-primary:#0f2a4a;--sk-brand-accent:#276ef1;--sk-page-background:#f5f8fc;--sk-text-color:#13213a}
+html,body{accent-color:var(--sk-brand-accent)}
+img[data-site-logo],header .site-logo img,header .brand-logo img,header .navbar-brand img,.admin-sidebar .logo img,.sidebar .logo img{object-fit:contain!important;height:auto;max-width:100%}

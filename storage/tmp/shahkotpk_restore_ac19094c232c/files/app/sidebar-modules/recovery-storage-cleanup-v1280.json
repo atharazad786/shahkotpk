@@ -1,0 +1,13 @@
+{
+  "module_key": "recovery_storage_cleanup_v1280",
+  "label": "Backup Storage Cleanup",
+  "url": "/admin/backup-storage-cleanup.php",
+  "icon": "⌫",
+  "placement": "admin_tools",
+  "tool_group": "Recovery",
+  "sort_order": 35,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "12.8.0",
+  "description": "Preview and safely clean old restore points, updater archives, cache/temp files, rotated logs and other reclaimable backup storage."
+}

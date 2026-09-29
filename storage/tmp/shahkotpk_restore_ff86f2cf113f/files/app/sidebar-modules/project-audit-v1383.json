@@ -1,0 +1,10 @@
+{
+  "module_key": "admin_project_audit_v1383",
+  "label": "Full Project Audit",
+  "url": "/admin/project-audit.php",
+  "icon": "✓",
+  "category": "ADMIN",
+  "sort_order": 96,
+  "enabled": 1,
+  "permission": "admin.project_audit"
+}

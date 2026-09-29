@@ -1,0 +1,18 @@
+{
+  "module_key": "landing_theme_sync_v1110",
+  "label": "Landing Theme Sync",
+  "url": "/admin/landing-theme-sync.php",
+  "icon": "◇",
+  "placement": "sidebar",
+  "category_key": "site_growth",
+  "category_label": "SITE & GROWTH",
+  "category_order": 20,
+  "subgroup_key": "landing_pages",
+  "subgroup_label": "Landing Pages",
+  "subgroup_order": 12,
+  "sort_order": 18,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "11.1.0",
+  "description": "Synchronize Smart Homepage Builder features into every active Public Website Landing Page Theme."
+}

@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "module_key": "admin_module_control_v1320",
+      "label": "Module Visibility",
+      "url": "/admin/module-control.php",
+      "icon": "◉",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 90,
+      "enabled": 1,
+      "description": "Tenant-level public module visibility and access feature controls."
+    }
+  ]
+}

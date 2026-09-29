@@ -1,0 +1,19 @@
+/* ShahkotPK v13.8.5 — native public menu hard lock.
+   The native ShahkotPK navigation is authoritative. Legacy Step-3 managed nav must never render. */
+#sk1302-public-nav,
+[data-sk13032-managed="1"]{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+.sk1302-native-nav-hidden,
+.sk13032-legacy-link-hidden,
+.sk13032-empty-legacy-item{
+  display:revert!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+html.sk1385-native-menu-lock header nav:not(#sk1302-public-nav){
+  visibility:visible;
+}

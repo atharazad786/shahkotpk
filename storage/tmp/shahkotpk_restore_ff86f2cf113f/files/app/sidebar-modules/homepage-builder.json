@@ -1,0 +1,15 @@
+{
+  "module_key": "homepage_builder",
+  "label": "Homepage Builder",
+  "url": "/admin/homepage-builder.php",
+  "icon": "⌂",
+  "placement": "sidebar",
+  "category_key": "site_growth",
+  "category_label": "SITE & GROWTH",
+  "category_order": 70,
+  "sort_order": 10,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "10.1.0",
+  "description": "Preview, configure, activate and safely restore the ShahkotPK homepage."
+}

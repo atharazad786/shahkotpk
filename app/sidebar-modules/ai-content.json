@@ -1,0 +1,1 @@
+{ "items": [ { "label": "AI Content Generator", "url": "/admin/ai-content-generator.php", "icon": "✨", "placement": "sidebar", "enabled": true, "category_key": "ai", "category_label": "AI MODULES", "category_order": 20, "sort_order": 1 } ] }

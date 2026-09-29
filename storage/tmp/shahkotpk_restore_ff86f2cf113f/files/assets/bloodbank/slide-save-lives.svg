@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 760" role="img" aria-label="Donate blood community banner">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#150611"/><stop offset=".52" stop-color="#5b0b22"/><stop offset="1" stop-color="#d8163f"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ff7a91" stop-opacity=".75"/><stop offset="1" stop-color="#ff7a91" stop-opacity="0"/></radialGradient>
+ <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff5b6f"/><stop offset="1" stop-color="#ba062d"/></linearGradient>
+</defs>
+<rect width="1920" height="760" fill="url(#bg)"/><circle cx="1500" cy="330" r="430" fill="url(#glow)"/>
+<g opacity=".16" fill="none" stroke="#fff" stroke-width="2"><circle cx="1430" cy="330" r="245"/><circle cx="1430" cy="330" r="320"/><path d="M1050 610c180-190 350-250 660-310M1100 150c200 170 410 195 690 105"/></g>
+<g transform="translate(1270 108)"><path d="M172 0C124 78 26 180 26 295c0 113 91 205 205 205s205-92 205-205C436 180 338 78 290 0c-32 47-60 47-118 0z" fill="url(#drop)"/><circle cx="232" cy="297" r="94" fill="#fff" opacity=".96"/><path d="M210 236h44v39h39v44h-39v39h-44v-39h-39v-44h39z" fill="#d8163f"/></g>
+<g transform="translate(1190 535)" fill="#fff" opacity=".96"><circle cx="70" cy="38" r="28"/><path d="M15 112c3-43 25-66 55-66s52 23 55 66z"/><circle cx="185" cy="27" r="24"/><path d="M140 112c4-37 21-57 45-57s42 20 45 57z"/><circle cx="286" cy="38" r="28"/><path d="M231 112c3-43 25-66 55-66s52 23 55 66z"/></g>
+<g opacity=".7" fill="#fff"><circle cx="1775" cy="135" r="8"/><circle cx="1670" cy="620" r="11"/><circle cx="1095" cy="292" r="7"/></g>
+</svg>

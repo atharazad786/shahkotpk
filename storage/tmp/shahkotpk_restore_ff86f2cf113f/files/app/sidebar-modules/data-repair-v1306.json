@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "data_repair_v1306",
+      "label": "Data Repair Center",
+      "url": "/admin/data-repair.php",
+      "icon": "✓",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 94,
+      "enabled": 1
+    }
+  ]
+}

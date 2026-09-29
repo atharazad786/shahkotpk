@@ -1,0 +1,21 @@
+{
+    "ok": true,
+    "status": "restored",
+    "source_backup": "ShahkotPK_20260831_011650_pre_update_v13.8.1_611f0ad7.zip",
+    "source_version": "13.8.1",
+    "backup_sha256": "69bee2ee70e4ff3140f2bd2ca84d220d0beb757930401569b6b3004ee02fc4b0",
+    "before_index_sha256": "f174cd3dc113fd9f376ce267db0f8a72a0545a2f8e5c1b816bd6276663977124",
+    "restored_index_sha256": "ff9aaeac2d067f572304190d099d82975caff49913fdaa632c13cf29c68beb12",
+    "scope": [
+        "index.php"
+    ],
+    "preserved": [
+        "database",
+        "uploads",
+        "LMS",
+        "Classifieds",
+        "Service Provider Pro",
+        "current map/runtime/backend modules"
+    ],
+    "recorded_at": "2026-09-01T16:51:20+00:00"
+}

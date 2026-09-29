@@ -1,0 +1,2 @@
+<?php
+require __DIR__.'/../../app/bootstrap.php';require_once __DIR__.'/../../app/api_v2.php';$u=api_v2_user('profile');$appType=api_v2_app_type($_GET);$extra=[];if($appType==='seller'){$ctx=api_v2_seller_context($u);$extra=['seller_owner_id'=>(int)$ctx['owner_id'],'seller_staff'=>!empty($ctx['is_staff']),'seller_permissions'=>$ctx['permissions']];}api_v2_ok(['user'=>array_merge(api_v2_user_public($u),$extra)],(int)$u['user_id']);

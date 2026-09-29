@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/../app/bootstrap.php';
+require_once __DIR__.'/../app/enterprise_v900.php';
+header('Content-Type: application/json; charset=utf-8');
+function pw_fail(int $c,string $m): never {http_response_code($c);echo json_encode(['ok'=>false,'error'=>$m]);exit;}
+$gid=(int)($_GET['gateway']??0);if(!$gid)pw_fail(422,'Gateway ID required.');
+try{$q=db()->prepare('SELECT * FROM payment_gateways_v900 WHERE id=? AND enabled=1 LIMIT 1');$q->execute([$gid]);$g=$q->fetch();if(!$g)pw_fail(404,'Gateway not found.');$GLOBALS['V900_TENANT_OVERRIDE']=(int)$g['tenant_id'];if(!v900_rate_limit('payment_webhook:'.$gid,1200,3600))pw_fail(429,'Webhook rate limit exceeded.');$raw=(string)file_get_contents('php://input');$webSecret=v900_decrypt((string)$g['webhook_secret_cipher']);if($webSecret!==''){$sig=(string)($_SERVER['HTTP_X_SHAHKOT_SIGNATURE']??$_SERVER['HTTP_X_WEBHOOK_SIGNATURE']??'');$expected=hash_hmac('sha256',$raw,$webSecret);if($sig===''||!hash_equals($expected,preg_replace('/^sha256=/','',$sig)))pw_fail(401,'Webhook signature verification failed.');}$data=json_decode($raw,true);if(!is_array($data))$data=$_POST;$external=(string)($data['transaction_id']??$data['id']??$data['reference']??'');if($external==='')pw_fail(422,'External transaction reference missing.');$amount=(float)($data['amount']??0);$currency=strtoupper(substr((string)($data['currency']??'PKR'),0,3));$status=strtolower((string)($data['status']??'pending'));$map=['success'=>'paid','completed'=>'paid','succeeded'=>'paid','paid'=>'paid','failed'=>'failed','cancelled'=>'cancelled','canceled'=>'cancelled','refunded'=>'refunded'];$status=$map[$status]??$status;$id=v900_tx_upsert($gid,$external,$amount,$currency,$status,$data);echo json_encode(['ok'=>true,'transaction_id'=>$id,'status'=>$status]);
+}catch(Throwable $e){pw_fail(500,v900_clip($e->getMessage(),300));}

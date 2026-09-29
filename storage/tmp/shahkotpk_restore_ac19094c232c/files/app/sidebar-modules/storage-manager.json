@@ -1,0 +1,13 @@
+{
+  "module_key": "storage_manager",
+  "label": "Storage Control Center",
+  "url": "/admin/storage-manager.php",
+  "icon": "☁",
+  "placement": "admin_tools",
+  "tool_group": "Data",
+  "sort_order": 50,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "9.7.0",
+  "description": "Route uploads, media and backups between local and external storage providers."
+}

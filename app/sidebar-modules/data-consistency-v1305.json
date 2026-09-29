@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "data_consistency_v1305",
+      "label": "Data Consistency Center",
+      "url": "/admin/data-consistency.php",
+      "icon": "≋",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 93,
+      "enabled": 1
+    }
+  ]
+}

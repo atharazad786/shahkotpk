@@ -1,0 +1,50 @@
+{
+  "source_version": "10.5.1",
+  "items": [
+    {
+      "nav_key": "businesses",
+      "label": "Businesses",
+      "url": "/businesses.php",
+      "group_key": "primary",
+      "sort_order": 10,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "marketplace",
+      "label": "Marketplace",
+      "url": "/marketplace.php",
+      "group_key": "primary",
+      "sort_order": 20,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "property",
+      "label": "Property",
+      "url": "/property.php",
+      "group_key": "primary",
+      "sort_order": 30,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "health",
+      "label": "Health",
+      "url": "/doctor-online.php",
+      "group_key": "primary",
+      "sort_order": 40,
+      "enabled": 1,
+      "priority": "primary"
+    },
+    {
+      "nav_key": "events",
+      "label": "Events",
+      "url": "/discover-v1020.php?type=events",
+      "group_key": "primary",
+      "sort_order": 50,
+      "enabled": 1,
+      "priority": "secondary"
+    }
+  ]
+}

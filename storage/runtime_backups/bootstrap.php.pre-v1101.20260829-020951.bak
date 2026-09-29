@@ -1,0 +1,168 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/runtime_guard.php';
+
+$configFile = __DIR__ . '/../config/config.php';
+
+if (!is_file($configFile)) {
+    if (is_file(__DIR__ . '/../install.php')) {
+        header('Location: /install.php', true, 302);
+        exit;
+    }
+    http_response_code(500);
+    exit('CityHub configuration is missing.');
+}
+
+$config = require $configFile;
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_name($config['session_name'] ?? 'cityhub_session');
+    try { session_start(); } catch (Throwable $e) { runtime_log('Session start failed', $e); }
+}
+
+function db(): PDO {
+    static $pdo = null;
+    global $config;
+    if ($pdo instanceof PDO) return $pdo;
+
+    $c = $config['db'];
+    $pdo = new PDO(
+        "mysql:host={$c['host']};port={$c['port']};dbname={$c['name']};charset=utf8mb4",
+        $c['user'],
+        $c['pass'],
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ]
+    );
+    return $pdo;
+}
+
+function e($v): string {
+    return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');
+}
+
+function csrf_token(): string {
+    if (empty($_SESSION['_csrf'])) $_SESSION['_csrf'] = bin2hex(random_bytes(32));
+    return $_SESSION['_csrf'];
+}
+
+function csrf_check(): void {
+    if (!hash_equals($_SESSION['_csrf'] ?? '', $_POST['_csrf'] ?? '')) {
+        http_response_code(419);
+        exit('Invalid security token. Refresh and try again.');
+    }
+}
+
+function current_user(): ?array {
+    if (empty($_SESSION['user_id'])) return null;
+    try {
+        $q = db()->prepare("SELECT * FROM users WHERE id=? LIMIT 1");
+        $q->execute([$_SESSION['user_id']]);
+        $u=$q->fetch() ?: null;
+        if(!$u) unset($_SESSION['user_id']);
+        return $u;
+    } catch (Throwable $e) {
+        runtime_log('Unable to resolve current user', $e);
+        return null;
+    }
+}
+
+function require_login(): array {
+    $u = current_user();
+    if (!$u) {
+        header('Location: /login.php', true, 302);
+        exit;
+    }
+    return $u;
+}
+
+function require_admin(): array {
+    // Legacy compatibility: authorization is permission-based after permissions.php is loaded.
+    return require_staff();
+}
+
+
+
+require_once __DIR__ . '/migrations.php';
+try {
+    run_packaged_migrations(false);
+} catch (Throwable $e) {
+    migration_log('Bootstrap migration check failed: '.$e->getMessage());
+}
+
+require_once __DIR__ . '/settings.php';
+require_once __DIR__ . '/tenancy_v5.php';
+ensure_default_settings();
+
+date_default_timezone_set((string)tenant_brand('timezone',setting('timezone','Asia/Karachi')));
+$config['app_name']=(string)tenant_brand('site_name',setting('site_name',$config['app_name']??'ShahkotPK'));
+
+if (maintenance_should_block()) {
+    output_maintenance_page();
+}
+
+require_once __DIR__ . '/permissions.php';
+if(function_exists('tenant_boot_user_context'))tenant_boot_user_context();
+if(function_exists('tenant_enforce_admin_request_scope'))tenant_enforce_admin_request_scope();
+if(function_exists('tenant_brand')){
+    $config['app_name']=(string)tenant_brand('site_name',setting('site_name',$config['app_name']??'ShahkotPK'));
+    date_default_timezone_set((string)tenant_brand('timezone',setting('timezone','Asia/Karachi')));
+}
+
+require_once __DIR__ . '/ticker.php';
+
+require_once __DIR__ . '/theme_engine.php';
+
+require_once __DIR__ . '/admin_profile.php';
+
+require_once __DIR__ . '/cms.php';
+
+require_once __DIR__ . '/ads.php';
+
+runtime_safe_require(__DIR__ . '/city_portal.php','City Portal');
+runtime_safe_require(__DIR__ . '/maps.php','Google Maps');
+runtime_safe_require(__DIR__ . '/news.php','News Portal');
+runtime_safe_require(__DIR__ . '/blog.php','Blogging');
+runtime_safe_require(__DIR__ . '/live.php','Live Broadcast Center');
+runtime_safe_require(__DIR__ . '/engagement.php','Engagement Center');
+runtime_safe_require(__DIR__ . '/store.php','Marketplace');
+runtime_safe_require(__DIR__ . '/growth.php','Commercial Growth Suite');
+runtime_safe_require(__DIR__ . '/operations.php','Commercial Operations Suite');
+runtime_safe_require(__DIR__ . '/security_v4.php','Security & Reliability Suite');
+runtime_safe_require(__DIR__ . '/activity_log.php','Activity Logs & IP Location History');
+runtime_safe_require(__DIR__ . '/ai_v4.php','AI Suite');
+runtime_safe_require(__DIR__ . '/franchise_v4.php','Multi-City Franchise Suite');
+runtime_safe_require(__DIR__ . '/pos_v4.php','Seller POS Suite');
+runtime_safe_require(__DIR__ . '/platform_v4_cron.php','Unified Platform Cron');
+runtime_safe_require(__DIR__ . '/monetization_v41.php','Commercial Growth & Monetization Suite');
+if(function_exists('security_apply_headers'))security_apply_headers();
+if(function_exists('security_enforce_current_session'))security_enforce_current_session();
+if(function_exists('activity_register_request_logger'))activity_register_request_logger();
+if(!function_exists('operations_module_loaded')){function operations_module_loaded(): bool {return false;}}
+
+// Public fallbacks: a broken optional module must not make the whole site HTTP 500.
+if(!function_exists('city_portal_upgrade_homepage')){function city_portal_upgrade_homepage(): void {}}
+if(!function_exists('city_portal_context')){function city_portal_context(): array {return [];}}
+if(!function_exists('city_portal_cities')){function city_portal_cities(): array {return [];}}
+if(!function_exists('city_portal_category_counts')){function city_portal_category_counts(int $limit=30): array {return [];}}
+if(!function_exists('news_upgrade_homepage')){function news_upgrade_homepage(): void {}}
+if(!function_exists('blog_upgrade_homepage')){function blog_upgrade_homepage(): void {}}
+if(!function_exists('live_upgrade_homepage')){function live_upgrade_homepage(): void {}}
+if(!function_exists('store_upgrade_homepage')){function store_upgrade_homepage(): void {}}
+if(!function_exists('live_render_widget')){function live_render_widget(array $sections=[]): void {}}
+if(!function_exists('store_render_widget')){function store_render_widget(): void {}}
+if(!function_exists('engagement_render')){function engagement_render(): void {}}
+if(!function_exists('google_maps_ready')){function google_maps_ready(): bool {return false;}}
+if(!function_exists('render_google_maps_assets')){function render_google_maps_assets(): void {}}
+if(!function_exists('google_maps_public_module')){function google_maps_public_module(string $title,array $types=[],string $description=''): void {}}
+if(!function_exists('google_maps_allowed_types')){function google_maps_allowed_types(): array {return [];}}
+if(!function_exists('growth_enabled')){function growth_enabled(string $key='growth_suite_enabled',bool $default=true): bool {return false;}}
+if(!function_exists('growth_upgrade_homepage')){function growth_upgrade_homepage(): void {}}
+if(!function_exists('lt_growth_widget')){function lt_growth_widget(array $sections): void {}}
+if(!function_exists('growth_track')){function growth_track(string $event,string $entityType='',?int $entityId=null,?int $businessId=null,array $meta=[]): void {}}
+if(!function_exists('growth_register_referral_click')){function growth_register_referral_click(string $code): void {}}
+if(!function_exists('growth_attach_referral')){function growth_attach_referral(int $newUserId): void {}}
+if(!function_exists('growth_render_seo')){function growth_render_seo(string $type,int $id,array $fallback=[]): string {return '';}}

@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "module_key": "local_classifieds_marketplace_v1370",
+      "label": "Local Classifieds",
+      "url": "/admin/classifieds.php",
+      "icon": "\u25a6",
+      "placement": "sidebar",
+      "category_key": "platform",
+      "category_label": "PLATFORM",
+      "category_order": 30,
+      "sort_order": 42,
+      "enabled": 1,
+      "description": "OLX-style local classifieds marketplace: ads, moderation, reports, chat and promotions."
+    },
+    {
+      "module_key": "local_classifieds_settings_v1370",
+      "label": "Classifieds Settings",
+      "url": "/admin/classifieds-settings.php",
+      "icon": "\u2699",
+      "placement": "sidebar",
+      "category_key": "platform",
+      "category_label": "PLATFORM",
+      "category_order": 30,
+      "sort_order": 43,
+      "enabled": 1,
+      "description": "Marketplace settings, categories and safety moderation controls."
+    }
+  ]
+}

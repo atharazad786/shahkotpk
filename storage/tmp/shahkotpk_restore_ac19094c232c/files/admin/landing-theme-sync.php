@@ -1,0 +1,27 @@
+<?php
+require __DIR__.'/../app/bootstrap.php';
+require_once __DIR__.'/../app/layout.php';
+require_once __DIR__.'/../app/landing_theme_parity_v1110.php';
+$me=current_user();if(!$me||!(has_permission('settings.manage',$me)||has_permission('updates.manage',$me))){http_response_code(403);exit('Forbidden');}
+$tid=sk1110_tid();$flash='';$error='';
+try{if(($_SERVER['REQUEST_METHOD']??'')==='POST'){csrf_check();sk1110_save($tid,$_POST);$flash='Landing Page Theme sync settings saved.';}}catch(Throwable $e){$error=$e->getMessage();}
+$cfg=sk1110_config($tid);$sections=shp1010_sections($tid);page_start('Landing Theme Sync',true);
+?>
+<style>.lts{max-width:1180px;margin:0 auto;padding:22px}.lts .hero{padding:24px;border-radius:22px;background:linear-gradient(135deg,#0e2347,#155fd7);color:#fff;margin-bottom:18px}.lts .hero h2{margin:7px 0}.lts .hero p{max-width:850px;opacity:.85}.lts .panel{background:#fff;border:1px solid #e3e9f2;border-radius:18px;padding:20px;margin-bottom:16px}.lts .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lts label.toggle{display:flex;align-items:flex-start;gap:10px;padding:13px;border:1px solid #e6ebf3;border-radius:13px}.lts label.toggle b{display:block}.lts label.toggle small{display:block;color:#738198;margin-top:3px}.lts table{width:100%;border-collapse:collapse}.lts td,.lts th{padding:10px;border-bottom:1px solid #edf0f5;text-align:left}.lts .on{color:#067647;font-weight:800}.lts .off{color:#b42318;font-weight:800}.lts button{background:#155fd7;color:#fff;border:0;border-radius:11px;padding:11px 16px;font-weight:800}.lts .note{padding:12px;border-radius:12px;background:#f5f8fd;color:#52647c}.lts .ok{background:#ecfdf3;color:#067647}.lts .bad{background:#fef3f2;color:#b42318}@media(max-width:760px){.lts .grid{grid-template-columns:1fr}}</style>
+<div class="lts"><section class="hero"><span>PUBLIC WEBSITE • LANDING PAGE THEMES</span><h2>Smart Homepage Feature Parity</h2><p>Every active Landing Page Theme inherits the Smart Homepage Builder's enabled sections and visitor features without replacing the selected theme. Existing matching sections are kept; missing smart sections are added and compatible native cards receive the same customer actions.</p></section>
+<?php if($flash):?><div class="panel ok"><?=htmlspecialchars($flash)?></div><?php endif;?><?php if($error):?><div class="panel bad"><?=htmlspecialchars($error)?></div><?php endif;?>
+<form method="post"><input type="hidden" name="_csrf" value="<?=htmlspecialchars(csrf_token(),ENT_QUOTES)?>"><section class="panel"><h3>Theme parity controls</h3><div class="grid">
+<?php $opts=[
+'enabled'=>['Enable Landing Theme Sync','Master switch for all Landing Page Themes.'],
+'inherit_builder'=>['Inherit Homepage Builder','Use enabled sections, titles, order and limits from Smart Homepage Builder.'],
+'smart_search'=>['Smart Search + Save Search','Add the live search, voice-search and saved-search controls to theme hero areas.'],
+'enhance_native_cards'=>['Upgrade Existing Theme Cards','Add Save, Follow, Alert, Share, Compare and Q&A to recognized native listing cards.'],
+'inject_missing_sections'=>['Add Missing Smart Sections','Insert builder sections that the selected Landing Theme does not already render.'],
+'core_sections'=>['Sync Core Content Sections','Businesses, Marketplace, Property, Health, News, Jobs/Events and promotions.'],
+'smart_sections'=>['Sync Smart Visitor Sections','Daily Utility, Assistant, Trending, Near You, Reviews, Deals/Wallet, Recently Viewed, Rewards and SEO discovery.'],
+'floating_actions'=>['Floating Visitor Shortcuts','Alerts, Favorites and Compare quick buttons.'],
+'ai_chatbot'=>['Public AI Chatbot','Keep Ask ShahkotPK AI on all active landing themes.'],
+'auto_future_sections'=>['Auto-sync Future Homepage Sections','Future Smart Homepage Builder section keys are automatically considered by the parity layer.']];foreach($opts as $k=>$v):?><label class="toggle"><input type="checkbox" name="<?=$k?>" value="1" <?=!empty($cfg[$k])?'checked':''?>><span><b><?=htmlspecialchars($v[0])?></b><small><?=htmlspecialchars($v[1])?></small></span></label><?php endforeach;?></div><p style="margin-top:15px"><button>Save Theme Sync Settings</button></p></section></form>
+<section class="panel"><h3>Smart Homepage sections currently inherited</h3><p class="note">Turn sections ON/OFF, rename them or change order in <a href="/admin/homepage-builder.php">Homepage Builder</a>. Landing Page Themes will follow those settings automatically.</p><div style="overflow:auto"><table><thead><tr><th>Section</th><th>Title</th><th>Status</th><th>Order</th><th>Limit</th></tr></thead><tbody><?php foreach($sections as $s):?><tr><td><code><?=htmlspecialchars((string)$s['section_key'])?></code></td><td><?=htmlspecialchars((string)$s['title'])?></td><td class="<?=!empty($s['enabled'])?'on':'off'?>"><?=!empty($s['enabled'])?'SYNCED':'HIDDEN'?></td><td><?=(int)$s['sort_order']?></td><td><?=(int)$s['record_limit']?></td></tr><?php endforeach;?></tbody></table></div></section>
+<section class="panel"><h3>What this fixes</h3><p>Landing Page Themes now receive the features visible in your screenshots — Smart Search/Save Search, card Alerts/Favorites/Compare/Save/Follow/Share/Q&A, Daily Utility/“What do you need today?”, AI Assistant, Deals & Rewards — plus the enabled Smart Homepage sections that were not visible in those screenshots.</p></section></div>
+<?php require __DIR__.'/../app/end.php';?>

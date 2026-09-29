@@ -1,0 +1,13 @@
+{
+  "module_key": "security_performance",
+  "label": "Security & Performance",
+  "url": "/admin/security-performance.php",
+  "icon": "◈",
+  "placement": "admin_tools",
+  "tool_group": "Security",
+  "sort_order": 10,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "10.0.0",
+  "description": "Sessions, security events, IP controls, rate limits, slow pages and SQL performance."
+}

@@ -1,0 +1,2 @@
+<?php
+require __DIR__.'/../../app/bootstrap.php';require_once __DIR__.'/../../app/api_v1.php';if(!setting_bool('mobile_api_enabled',true))api_json(['ok'=>false,'error'=>'Mobile API is disabled'],503);$u=api_user();api_scope($u,'catalog');$q=trim((string)($_GET['q']??''));if($q==='')api_json(['ok'=>true,'data'=>['businesses'=>[],'products'=>[],'city_content'=>[]]]);api_json(['ok'=>true,'data'=>ai_smart_search($q,30)]);

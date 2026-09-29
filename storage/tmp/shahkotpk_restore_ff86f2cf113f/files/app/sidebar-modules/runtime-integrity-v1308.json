@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "runtime_integrity_v1308",
+      "label": "Runtime Performance",
+      "url": "/admin/runtime-integrity.php",
+      "icon": "⚡",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 96,
+      "enabled": 1
+    }
+  ]
+}

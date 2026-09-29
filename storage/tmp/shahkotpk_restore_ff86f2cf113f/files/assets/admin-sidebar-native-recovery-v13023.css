@@ -1,0 +1,13 @@
+/* ShahkotPK v13.0.2.3 — native sidebar recovery mode. */
+#sk-sidebar-registry-v1022{display:none!important;visibility:hidden!important;pointer-events:none!important}
+.sk1302-legacy-hidden,.sk1022-native-hidden,.sk13022-native-hidden,.sk13022-native-anchor-hidden{display:revert!important;visibility:visible!important;pointer-events:auto!important;opacity:1!important}
+html.sk13023-native-sidebar [data-admin-sidebar] a,
+html.sk13023-native-sidebar .admin-sidebar a,
+html.sk13023-native-sidebar #sidebar a,
+html.sk13023-native-sidebar aside.sidebar a,
+html.sk13023-native-sidebar .sidebar a{pointer-events:auto!important}
+html.sk13023-native-sidebar [data-admin-sidebar] a>* ,
+html.sk13023-native-sidebar .admin-sidebar a>* ,
+html.sk13023-native-sidebar #sidebar a>* ,
+html.sk13023-native-sidebar aside.sidebar a>* ,
+html.sk13023-native-sidebar .sidebar a>*{pointer-events:none!important}

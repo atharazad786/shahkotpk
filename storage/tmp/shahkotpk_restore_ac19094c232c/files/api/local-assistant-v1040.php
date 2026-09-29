@@ -1,0 +1,4 @@
+<?php
+require __DIR__.'/../app/bootstrap.php';require_once __DIR__.'/../app/local_assistant_booking_v1040.php';
+header('Content-Type: application/json; charset=utf-8');
+try{$a=(string)($_REQUEST['action']??'search');if($a==='search'){if(!sk1040_on('assistant'))throw new RuntimeException('Assistant is disabled.');$r=sk1040_search((string)($_GET['q']??''));echo json_encode(['ok'=>true]+$r,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);exit;}if(($_SERVER['REQUEST_METHOD']??'')!=='POST')throw new RuntimeException('POST required.');csrf_check();if($a==='book'){ $id=sk1040_create_booking($_POST);echo json_encode(['ok'=>true,'booking_id'=>$id,'message'=>'Booking request submitted.'],JSON_UNESCAPED_UNICODE);exit;}throw new RuntimeException('Unknown action.');}catch(Throwable $e){http_response_code(400);echo json_encode(['ok'=>false,'error'=>$e->getMessage()],JSON_UNESCAPED_UNICODE);}

@@ -1,0 +1,13 @@
+{
+  "module_key": "sidebar_manager",
+  "label": "Sidebar Manager",
+  "url": "/admin/sidebar-manager.php",
+  "icon": "☷",
+  "placement": "admin_tools",
+  "tool_group": "Admin UI",
+  "sort_order": 60,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "10.2.2",
+  "description": "Manage sidebar visibility, groups, subcategories, parent items, ordering and custom links."
+}

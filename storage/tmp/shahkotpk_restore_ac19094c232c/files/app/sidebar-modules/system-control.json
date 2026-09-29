@@ -1,0 +1,13 @@
+{
+  "module_key": "system_control",
+  "label": "Server & System Control",
+  "url": "/admin/system-control.php",
+  "icon": "▣",
+  "placement": "admin_tools",
+  "tool_group": "System",
+  "sort_order": 20,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "9.8.0",
+  "description": "Server health, cache, logs, cron, queues, diagnostics and maintenance mode."
+}

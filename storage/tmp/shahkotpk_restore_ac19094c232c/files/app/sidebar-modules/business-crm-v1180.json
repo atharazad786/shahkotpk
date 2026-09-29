@@ -1,0 +1,18 @@
+{
+  "module_key": "business_crm_v1180",
+  "label": "Business Customer CRM",
+  "url": "/admin/business-crm.php",
+  "icon": "CRM",
+  "placement": "sidebar",
+  "category_key": "city_listings",
+  "category_label": "CITY & LISTINGS",
+  "category_order": 40,
+  "subgroup_key": "business_websites",
+  "subgroup_label": "Business Websites",
+  "subgroup_order": 25,
+  "sort_order": 30,
+  "enabled": 1,
+  "permission": "businesses.manage",
+  "source_version": "11.8.0",
+  "description": "Manage business customers, website conversations, quotations and follow-up tasks."
+}

@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "public_seo_routing_v1312",
+      "label": "Public SEO & Routing",
+      "url": "/admin/public-seo-routing.php",
+      "icon": "🔎",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 100,
+      "enabled": 1
+    }
+  ]
+}

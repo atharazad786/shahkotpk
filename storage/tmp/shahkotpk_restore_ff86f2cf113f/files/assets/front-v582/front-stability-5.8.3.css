@@ -1,0 +1,16 @@
+/* ShahkotPK v5.8.3 — front flow / footer stability guard */
+html,body{min-height:100%}
+body.cms-public-page{min-height:100vh!important;display:block!important;position:relative!important}
+body.cms-public-page>.hb53-section-wrap,
+body.cms-public-page>.lt-section,
+body.cms-public-page>.news-home-section,
+body.cms-public-page>.blog-home,
+body.cms-public-page>.live-home-section,
+body.cms-public-page>.store-home-section{width:100%!important;max-width:none;clear:both!important;float:none!important;position:relative}
+body.cms-public-page .hb53-section-wrap{min-width:0;isolation:isolate}
+body.cms-public-page .hb53-section-wrap:after{content:"";display:block;clear:both}
+body.cms-public-page footer.lt-footer{display:block!important;width:100%!important;max-width:none!important;clear:both!important;float:none!important;position:relative!important;inset:auto!important;transform:none!important;z-index:20!important;margin-left:0!important;margin-right:0!important}
+body.cms-public-page footer.lt-footer+section,
+body.cms-public-page footer.lt-footer+.hb53-section-wrap{margin-top:0}
+body.cms-public-page .mobile-sticky-cta{z-index:1250}
+@media(max-width:820px){body.cms-public-page footer.lt-footer{padding-bottom:max(72px,calc(58px + env(safe-area-inset-bottom)))!important}}

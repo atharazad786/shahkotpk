@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "database_integrity_v1311",
+      "label": "Database Integrity",
+      "url": "/admin/database-integrity.php",
+      "icon": "🗄️",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 99,
+      "enabled": 1
+    }
+  ]
+}

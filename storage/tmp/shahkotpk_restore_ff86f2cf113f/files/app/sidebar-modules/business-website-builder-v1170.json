@@ -1,0 +1,18 @@
+{
+  "module_key": "business_website_builder_v1170",
+  "label": "Business Website Builder",
+  "url": "/admin/business-website-builder.php",
+  "icon": "\u25a4",
+  "placement": "sidebar",
+  "category_key": "city_listings",
+  "category_label": "CITY & LISTINGS",
+  "category_order": 40,
+  "subgroup_key": "business_websites",
+  "subgroup_label": "Business Websites",
+  "subgroup_order": 25,
+  "sort_order": 20,
+  "enabled": 1,
+  "permission": "businesses.manage",
+  "source_version": "11.7.0",
+  "description": "Control business hero sliders, section order/visibility, CTAs, enquiry forms, website leads and analytics."
+}

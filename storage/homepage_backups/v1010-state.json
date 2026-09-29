@@ -1,0 +1,8 @@
+{
+    "backup": "/home/shahkotp/public_html/storage/homepage_backups/index.php.pre-v1010.20260828-233756.bak",
+    "activated_at": "2026-08-28T23:37:56+05:00",
+    "actor_id": 1,
+    "reverted_at": "2026-08-28T23:39:11+05:00",
+    "reverted_by": 1,
+    "v1010_safety_backup": "/home/shahkotp/public_html/storage/homepage_backups/index.php.v1010-before-revert.20260828-233911.bak"
+}

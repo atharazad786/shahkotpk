@@ -1,0 +1,18 @@
+{
+  "module_key": "delivery_hub_v1230",
+  "label": "Riders & Delivery",
+  "url": "/admin/delivery-hub.php",
+  "icon": "Ride",
+  "placement": "sidebar",
+  "category_key": "customer_services",
+  "category_label": "CUSTOMER & SERVICES",
+  "category_order": 45,
+  "subgroup_key": "commerce_delivery",
+  "subgroup_label": "Commerce & Delivery",
+  "subgroup_order": 40,
+  "sort_order": 30,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "12.3.0",
+  "description": "Hyperlocal rider profiles, delivery assignment, ETA/status tracking and COD settlement."
+}

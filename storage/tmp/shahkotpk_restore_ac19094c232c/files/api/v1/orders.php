@@ -1,0 +1,2 @@
+<?php
+require __DIR__.'/../../app/bootstrap.php';require_once __DIR__.'/../../app/api_v1.php';if(!setting_bool('mobile_api_enabled',true))api_json(['ok'=>false,'error'=>'Mobile API is disabled'],503);$u=api_user();api_scope($u,'orders');$uid=(int)$u['user_id'];$role=(string)$u['role'];if($role==='shopkeeper'){$q=db()->prepare('SELECT * FROM store_orders WHERE seller_user_id=? ORDER BY id DESC LIMIT 100');}else{$q=db()->prepare('SELECT * FROM store_orders WHERE buyer_user_id=? ORDER BY id DESC LIMIT 100');}$q->execute([$uid]);api_json(['ok'=>true,'orders'=>$q->fetchAll()]);

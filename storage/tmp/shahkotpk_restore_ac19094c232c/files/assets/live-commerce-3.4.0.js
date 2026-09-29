@@ -1,0 +1,5 @@
+(function(){
+ document.querySelectorAll('[data-notification-panel] .lc-bell').forEach(b=>b.addEventListener('click',()=>b.closest('[data-notification-panel]').classList.toggle('open')));
+ const p=document.querySelector('.lc-popup[data-popup-id]');if(p){const id=p.dataset.popupId,policy=p.dataset.popupRepeat||'once_session',key='shp_popup_'+id+(policy==='once_day'?'_'+new Date().toISOString().slice(0,10):'');let seen=false;try{seen=policy==='once_session'?sessionStorage.getItem(key):policy==='once_day'?localStorage.getItem(key):false}catch(e){}if(!seen){setTimeout(()=>{p.hidden=false},650)}p.querySelector('.lc-popup-close')?.addEventListener('click',()=>{p.hidden=true;try{if(policy==='once_session')sessionStorage.setItem(key,'1');else if(policy==='once_day')localStorage.setItem(key,'1')}catch(e){}})}
+ document.querySelectorAll('video[data-hls]').forEach(v=>{const src=v.dataset.hls;if(v.canPlayType('application/vnd.apple.mpegurl')){v.src=src;return;}if(window.Hls&&window.Hls.isSupported()){const h=new Hls();h.loadSource(src);h.attachMedia(v);}});
+})();

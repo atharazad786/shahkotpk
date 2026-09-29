@@ -1,0 +1,278 @@
+/* ShahkotPK v5.1.1 — shared structural layer for the three v5.1 reference themes.
+   Loaded BEFORE the individual theme CSS so each theme keeps its own visual identity. */
+body.landing-theme-city-listing-motion *,
+body.landing-theme-townhub-explorer *,
+body.landing-theme-urbango-spots *{box-sizing:border-box}
+
+body.landing-theme-city-listing-motion .cgp-hero-grid,
+body.landing-theme-townhub-explorer .cgp-hero-grid,
+body.landing-theme-urbango-spots .cgp-hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:34px;align-items:center}
+
+body.landing-theme-city-listing-motion .cgp-smart-search,
+body.landing-theme-townhub-explorer .cgp-smart-search,
+body.landing-theme-urbango-spots .cgp-smart-search{width:100%;align-items:stretch}
+
+body.landing-theme-city-listing-motion .cgp-search-main,
+body.landing-theme-townhub-explorer .cgp-search-main,
+body.landing-theme-urbango-spots .cgp-search-main{display:flex;align-items:center;gap:10px;min-width:0;padding:0 15px;overflow:hidden}
+
+body.landing-theme-city-listing-motion .cgp-search-main>span,
+body.landing-theme-townhub-explorer .cgp-search-main>span,
+body.landing-theme-urbango-spots .cgp-search-main>span{flex:0 0 auto;font-size:18px;line-height:1;opacity:.68}
+
+body.landing-theme-city-listing-motion .cgp-search-input,
+body.landing-theme-townhub-explorer .cgp-search-input,
+body.landing-theme-urbango-spots .cgp-search-input{display:block;flex:1 1 auto;width:100%;min-width:0;height:100%;min-height:48px;margin:0;padding:0;border:0!important;outline:0;background:transparent!important;color:inherit;font:inherit;font-size:14px;box-shadow:none!important}
+
+body.landing-theme-city-listing-motion .cgp-search-input::placeholder,
+body.landing-theme-townhub-explorer .cgp-search-input::placeholder,
+body.landing-theme-urbango-spots .cgp-search-input::placeholder{color:#8b95a5;opacity:1}
+
+body.landing-theme-city-listing-motion .cgp-search-select,
+body.landing-theme-townhub-explorer .cgp-search-select,
+body.landing-theme-urbango-spots .cgp-search-select{display:block;width:100%;min-width:0;padding:0 36px 0 14px;font:inherit;font-size:14px;outline:0;cursor:pointer}
+
+body.landing-theme-city-listing-motion .cgp-search-submit,
+body.landing-theme-townhub-explorer .cgp-search-submit,
+body.landing-theme-urbango-spots .cgp-search-submit{display:inline-flex;align-items:center;justify-content:center;min-height:50px;white-space:nowrap;font:inherit;font-size:14px;cursor:pointer}
+
+body.landing-theme-city-listing-motion .cgp-near-btn,
+body.landing-theme-townhub-explorer .cgp-near-btn,
+body.landing-theme-urbango-spots .cgp-near-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:34px;margin:0;padding:7px 11px;border:1px solid transparent;border-radius:8px;font:inherit;font-size:13px;cursor:pointer}
+
+body.landing-theme-city-listing-motion .lt-popular,
+body.landing-theme-townhub-explorer .lt-popular,
+body.landing-theme-urbango-spots .lt-popular{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+
+body.landing-theme-city-listing-motion .lt-popular a,
+body.landing-theme-townhub-explorer .lt-popular a,
+body.landing-theme-urbango-spots .lt-popular a{display:inline-flex;align-items:center;min-height:30px;text-decoration:none;font-size:12px;line-height:1.2}
+
+body.landing-theme-city-listing-motion .cgp-hero-panel,
+body.landing-theme-townhub-explorer .cgp-hero-panel,
+body.landing-theme-urbango-spots .cgp-hero-panel{min-width:0}
+
+body.landing-theme-city-listing-motion .cgp-city-card,
+body.landing-theme-townhub-explorer .cgp-city-card,
+body.landing-theme-urbango-spots .cgp-city-card{padding:24px;min-width:0}
+
+body.landing-theme-city-listing-motion .cgp-city-card>span,
+body.landing-theme-townhub-explorer .cgp-city-card>span,
+body.landing-theme-urbango-spots .cgp-city-card>span{display:block;margin-bottom:12px;font-size:11px;font-weight:900;letter-spacing:.08em;opacity:.78}
+
+body.landing-theme-city-listing-motion .cgp-city-card h3,
+body.landing-theme-townhub-explorer .cgp-city-card h3,
+body.landing-theme-urbango-spots .cgp-city-card h3{margin:0 0 10px;font-size:30px;line-height:1.1}
+
+body.landing-theme-city-listing-motion .cgp-city-card p,
+body.landing-theme-townhub-explorer .cgp-city-card p,
+body.landing-theme-urbango-spots .cgp-city-card p{margin:0;font-size:14px;line-height:1.6;opacity:.75}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid,
+body.landing-theme-townhub-explorer .cgp-stat-grid,
+body.landing-theme-urbango-spots .cgp-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:hidden}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid>div,
+body.landing-theme-townhub-explorer .cgp-stat-grid>div,
+body.landing-theme-urbango-spots .cgp-stat-grid>div{min-width:0;padding:16px 17px;border-right:1px solid rgba(127,127,127,.14);border-bottom:1px solid rgba(127,127,127,.14)}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid>div:nth-child(2n),
+body.landing-theme-townhub-explorer .cgp-stat-grid>div:nth-child(2n),
+body.landing-theme-urbango-spots .cgp-stat-grid>div:nth-child(2n){border-right:0}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid>div:nth-last-child(-n+2),
+body.landing-theme-townhub-explorer .cgp-stat-grid>div:nth-last-child(-n+2),
+body.landing-theme-urbango-spots .cgp-stat-grid>div:nth-last-child(-n+2){border-bottom:0}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid b,
+body.landing-theme-townhub-explorer .cgp-stat-grid b,
+body.landing-theme-urbango-spots .cgp-stat-grid b{display:block;margin-bottom:4px;font-size:23px;line-height:1;font-weight:900}
+
+body.landing-theme-city-listing-motion .cgp-stat-grid span,
+body.landing-theme-townhub-explorer .cgp-stat-grid span,
+body.landing-theme-urbango-spots .cgp-stat-grid span{display:block;font-size:11px;line-height:1.3;opacity:.7}
+
+body.landing-theme-city-listing-motion .cgp-hero-shortcuts,
+body.landing-theme-townhub-explorer .cgp-hero-shortcuts,
+body.landing-theme-urbango-spots .cgp-hero-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:hidden}
+
+body.landing-theme-city-listing-motion .cgp-hero-shortcuts a,
+body.landing-theme-townhub-explorer .cgp-hero-shortcuts a,
+body.landing-theme-urbango-spots .cgp-hero-shortcuts a{display:flex;min-width:0;min-height:70px;padding:13px 8px;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-right:1px solid rgba(127,127,127,.14);text-align:center;text-decoration:none;font-size:18px;font-weight:900;line-height:1}
+
+body.landing-theme-city-listing-motion .cgp-hero-shortcuts a:last-child,
+body.landing-theme-townhub-explorer .cgp-hero-shortcuts a:last-child,
+body.landing-theme-urbango-spots .cgp-hero-shortcuts a:last-child{border-right:0}
+
+body.landing-theme-city-listing-motion .cgp-hero-shortcuts a span,
+body.landing-theme-townhub-explorer .cgp-hero-shortcuts a span,
+body.landing-theme-urbango-spots .cgp-hero-shortcuts a span{display:block;font-size:11px;font-weight:800;line-height:1.2}
+
+/* Shared portal-section geometry. The individual themes style colors, radii and shadows. */
+body.landing-theme-city-listing-motion .cgp-section-head,
+body.landing-theme-townhub-explorer .cgp-section-head,
+body.landing-theme-urbango-spots .cgp-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
+
+body.landing-theme-city-listing-motion .cgp-section-head>.lt-heading,
+body.landing-theme-townhub-explorer .cgp-section-head>.lt-heading,
+body.landing-theme-urbango-spots .cgp-section-head>.lt-heading{margin:0;max-width:760px}
+
+body.landing-theme-city-listing-motion .cgp-section-head>a,
+body.landing-theme-townhub-explorer .cgp-section-head>a,
+body.landing-theme-urbango-spots .cgp-section-head>a{flex:0 0 auto;text-decoration:none;font-weight:800}
+
+body.landing-theme-city-listing-motion .cgp-category-grid,
+body.landing-theme-townhub-explorer .cgp-category-grid,
+body.landing-theme-urbango-spots .cgp-category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+
+body.landing-theme-city-listing-motion .cgp-category-grid>a,
+body.landing-theme-townhub-explorer .cgp-category-grid>a,
+body.landing-theme-urbango-spots .cgp-category-grid>a{display:flex;align-items:center;gap:12px;min-width:0;padding:18px;text-decoration:none}
+
+body.landing-theme-city-listing-motion .cgp-category-grid>a>i,
+body.landing-theme-townhub-explorer .cgp-category-grid>a>i,
+body.landing-theme-urbango-spots .cgp-category-grid>a>i{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;font-style:normal;font-weight:900;background:rgba(127,127,127,.1)}
+
+body.landing-theme-city-listing-motion .cgp-category-grid>a>span,
+body.landing-theme-townhub-explorer .cgp-category-grid>a>span,
+body.landing-theme-urbango-spots .cgp-category-grid>a>span{min-width:0;flex:1}
+
+body.landing-theme-city-listing-motion .cgp-category-grid>a b,
+body.landing-theme-townhub-explorer .cgp-category-grid>a b,
+body.landing-theme-urbango-spots .cgp-category-grid>a b,
+body.landing-theme-city-listing-motion .cgp-category-grid>a small,
+body.landing-theme-townhub-explorer .cgp-category-grid>a small,
+body.landing-theme-urbango-spots .cgp-category-grid>a small{display:block}
+
+body.landing-theme-city-listing-motion .cgp-category-grid>a small,
+body.landing-theme-townhub-explorer .cgp-category-grid>a small,
+body.landing-theme-urbango-spots .cgp-category-grid>a small{margin-top:4px;font-size:11px;opacity:.65}
+
+body.landing-theme-city-listing-motion .cgp-deal-grid,
+body.landing-theme-townhub-explorer .cgp-deal-grid,
+body.landing-theme-urbango-spots .cgp-deal-grid,
+body.landing-theme-city-listing-motion .cgp-local-business-grid,
+body.landing-theme-townhub-explorer .cgp-local-business-grid,
+body.landing-theme-urbango-spots .cgp-local-business-grid,
+body.landing-theme-city-listing-motion .cgp-property-grid,
+body.landing-theme-townhub-explorer .cgp-property-grid,
+body.landing-theme-urbango-spots .cgp-property-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+
+body.landing-theme-city-listing-motion .cgp-deal-grid article,
+body.landing-theme-townhub-explorer .cgp-deal-grid article,
+body.landing-theme-urbango-spots .cgp-deal-grid article,
+body.landing-theme-city-listing-motion .cgp-local-business-grid article,
+body.landing-theme-townhub-explorer .cgp-local-business-grid article,
+body.landing-theme-urbango-spots .cgp-local-business-grid article,
+body.landing-theme-city-listing-motion .cgp-property-grid article,
+body.landing-theme-townhub-explorer .cgp-property-grid article,
+body.landing-theme-urbango-spots .cgp-property-grid article{min-width:0;overflow:hidden;background:#fff}
+
+body.landing-theme-city-listing-motion .cgp-item-image,
+body.landing-theme-townhub-explorer .cgp-item-image,
+body.landing-theme-urbango-spots .cgp-item-image,
+body.landing-theme-city-listing-motion .cgp-local-image,
+body.landing-theme-townhub-explorer .cgp-local-image,
+body.landing-theme-urbango-spots .cgp-local-image,
+body.landing-theme-city-listing-motion .cgp-property-image,
+body.landing-theme-townhub-explorer .cgp-property-image,
+body.landing-theme-urbango-spots .cgp-property-image{min-height:210px;background:#e9edf2 center/cover no-repeat}
+
+body.landing-theme-city-listing-motion .cgp-deal-grid article>div:last-child,
+body.landing-theme-townhub-explorer .cgp-deal-grid article>div:last-child,
+body.landing-theme-urbango-spots .cgp-deal-grid article>div:last-child,
+body.landing-theme-city-listing-motion .cgp-local-business-grid article>div:last-child,
+body.landing-theme-townhub-explorer .cgp-local-business-grid article>div:last-child,
+body.landing-theme-urbango-spots .cgp-local-business-grid article>div:last-child,
+body.landing-theme-city-listing-motion .cgp-property-grid article>div:last-child,
+body.landing-theme-townhub-explorer .cgp-property-grid article>div:last-child,
+body.landing-theme-urbango-spots .cgp-property-grid article>div:last-child{padding:18px}
+
+body.landing-theme-city-listing-motion .cgp-event-grid,
+body.landing-theme-townhub-explorer .cgp-event-grid,
+body.landing-theme-urbango-spots .cgp-event-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+
+body.landing-theme-city-listing-motion .cgp-event-grid article,
+body.landing-theme-townhub-explorer .cgp-event-grid article,
+body.landing-theme-urbango-spots .cgp-event-grid article{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:start;padding:18px;background:#fff}
+
+body.landing-theme-city-listing-motion .cgp-event-date,
+body.landing-theme-townhub-explorer .cgp-event-date,
+body.landing-theme-urbango-spots .cgp-event-date{display:grid;place-items:center;min-height:76px;text-align:center;border-radius:12px;background:rgba(127,127,127,.09)}
+
+body.landing-theme-city-listing-motion .cgp-event-date b,
+body.landing-theme-townhub-explorer .cgp-event-date b,
+body.landing-theme-urbango-spots .cgp-event-date b{font-size:26px;line-height:1}
+
+body.landing-theme-city-listing-motion .cgp-job-list,
+body.landing-theme-townhub-explorer .cgp-job-list,
+body.landing-theme-urbango-spots .cgp-job-list{display:grid;gap:10px}
+
+body.landing-theme-city-listing-motion .cgp-job-list>a,
+body.landing-theme-townhub-explorer .cgp-job-list>a,
+body.landing-theme-urbango-spots .cgp-job-list>a{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:17px 18px;background:#fff;text-decoration:none}
+
+body.landing-theme-city-listing-motion .cgp-job-list>a span b,
+body.landing-theme-townhub-explorer .cgp-job-list>a span b,
+body.landing-theme-urbango-spots .cgp-job-list>a span b,
+body.landing-theme-city-listing-motion .cgp-job-list>a span small,
+body.landing-theme-townhub-explorer .cgp-job-list>a span small,
+body.landing-theme-urbango-spots .cgp-job-list>a span small{display:block}
+
+body.landing-theme-city-listing-motion .cgp-guide-grid,
+body.landing-theme-townhub-explorer .cgp-guide-grid,
+body.landing-theme-urbango-spots .cgp-guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+
+body.landing-theme-city-listing-motion .cgp-guide-grid>a,
+body.landing-theme-townhub-explorer .cgp-guide-grid>a,
+body.landing-theme-urbango-spots .cgp-guide-grid>a{display:flex;align-items:flex-end;min-height:280px;padding:22px;background:#dfe5ea center/cover no-repeat;position:relative;overflow:hidden;text-decoration:none}
+
+body.landing-theme-city-listing-motion .cgp-guide-grid>a:before,
+body.landing-theme-townhub-explorer .cgp-guide-grid>a:before,
+body.landing-theme-urbango-spots .cgp-guide-grid>a:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,.04))}
+
+body.landing-theme-city-listing-motion .cgp-guide-grid>a>div,
+body.landing-theme-townhub-explorer .cgp-guide-grid>a>div,
+body.landing-theme-urbango-spots .cgp-guide-grid>a>div{position:relative;z-index:1;color:#fff}
+
+body.landing-theme-city-listing-motion .cgp-advertise-card,
+body.landing-theme-townhub-explorer .cgp-advertise-card,
+body.landing-theme-urbango-spots .cgp-advertise-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr) auto;gap:24px;align-items:center;padding:32px}
+
+body.landing-theme-city-listing-motion .cgp-ad-placements,
+body.landing-theme-townhub-explorer .cgp-ad-placements,
+body.landing-theme-urbango-spots .cgp-ad-placements{display:flex;flex-wrap:wrap;gap:8px}
+
+body.landing-theme-city-listing-motion .cgp-ad-placements span,
+body.landing-theme-townhub-explorer .cgp-ad-placements span,
+body.landing-theme-urbango-spots .cgp-ad-placements span{display:inline-flex;padding:7px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:11px}
+
+@media(max-width:900px){
+ body.landing-theme-city-listing-motion .cgp-section-head,
+ body.landing-theme-townhub-explorer .cgp-section-head,
+ body.landing-theme-urbango-spots .cgp-section-head{align-items:flex-start;flex-direction:column}
+ body.landing-theme-city-listing-motion .cgp-advertise-card,
+ body.landing-theme-townhub-explorer .cgp-advertise-card,
+ body.landing-theme-urbango-spots .cgp-advertise-card{grid-template-columns:1fr}
+}
+
+@media(max-width:620px){
+ body.landing-theme-city-listing-motion .cgp-stat-grid,
+ body.landing-theme-townhub-explorer .cgp-stat-grid,
+ body.landing-theme-urbango-spots .cgp-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.landing-theme-city-listing-motion .cgp-hero-shortcuts,
+ body.landing-theme-townhub-explorer .cgp-hero-shortcuts,
+ body.landing-theme-urbango-spots .cgp-hero-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.landing-theme-city-listing-motion .cgp-hero-shortcuts a:nth-child(2),
+ body.landing-theme-townhub-explorer .cgp-hero-shortcuts a:nth-child(2),
+ body.landing-theme-urbango-spots .cgp-hero-shortcuts a:nth-child(2){border-right:0}
+ body.landing-theme-city-listing-motion .cgp-hero-shortcuts a:nth-child(-n+2),
+ body.landing-theme-townhub-explorer .cgp-hero-shortcuts a:nth-child(-n+2),
+ body.landing-theme-urbango-spots .cgp-hero-shortcuts a:nth-child(-n+2){border-bottom:1px solid rgba(127,127,127,.14)}
+ body.landing-theme-city-listing-motion .cgp-job-list>a,
+ body.landing-theme-townhub-explorer .cgp-job-list>a,
+ body.landing-theme-urbango-spots .cgp-job-list>a{grid-template-columns:auto minmax(0,1fr) auto}
+ body.landing-theme-city-listing-motion .cgp-job-list>a strong,
+ body.landing-theme-townhub-explorer .cgp-job-list>a strong,
+ body.landing-theme-urbango-spots .cgp-job-list>a strong{display:none}
+}

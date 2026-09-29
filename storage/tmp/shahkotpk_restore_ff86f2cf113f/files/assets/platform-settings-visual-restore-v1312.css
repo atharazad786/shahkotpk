@@ -1,0 +1,9 @@
+/* ShahkotPK v13.1.2 — Platform Settings visibility/contrast recovery.
+   Activated only after JS confirms the Platform Settings page. */
+body.skps1312-page .skps1312-force-dark{color:#10233e!important;-webkit-text-fill-color:#10233e!important;text-shadow:none!important;opacity:1!important;}
+body.skps1312-page .skps1312-force-muted{color:#5b6b82!important;-webkit-text-fill-color:#5b6b82!important;text-shadow:none!important;opacity:1!important;}
+body.skps1312-page .skps1312-force-light{color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important;}
+body.skps1312-page .skps1312-readable{visibility:visible!important;opacity:1!important;}
+body.skps1312-page [data-sk1311-map-recovery],body.skps1312-page #sk1311-map-recovery{display:none!important;}
+body.skps1312-page .skps1312-recovered-label{display:block!important;margin-top:4px!important;font-size:13px!important;line-height:1.25!important;color:#10233e!important;font-weight:700!important;white-space:normal!important;}
+body.skps1312-page .skps1312-recovered-description{display:block!important;margin-top:3px!important;font-size:12px!important;line-height:1.35!important;color:#66758b!important;font-weight:500!important;white-space:normal!important;}

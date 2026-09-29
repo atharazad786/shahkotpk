@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "media_integrity_v1307",
+      "label": "Media Integrity Center",
+      "url": "/admin/media-integrity.php",
+      "icon": "◫",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 95,
+      "enabled": 1
+    }
+  ]
+}

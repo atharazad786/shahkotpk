@@ -1,0 +1,18 @@
+{
+  "module_key": "user_experience_v1120",
+  "label": "User Experience",
+  "url": "/admin/user-experience.php",
+  "icon": "\u2726",
+  "placement": "sidebar",
+  "category_key": "site_growth",
+  "category_label": "SITE & GROWTH",
+  "category_order": 20,
+  "subgroup_key": "experience",
+  "subgroup_label": "Experience",
+  "subgroup_order": 35,
+  "sort_order": 20,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "11.2.0",
+  "description": "Advanced Landing Theme Studio UX, mobile navigation, smart interactions, autosave, accessibility and UX analytics."
+}

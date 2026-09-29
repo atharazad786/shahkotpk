@@ -1,0 +1,6 @@
+/* ShahkotPK v9.7.3 sidebar overlap fix.
+   The Admin Tools item clones the installed theme's own menu row, so no fixed/absolute
+   positioning is introduced here. */
+[data-sk973-admin-tools]{position:static!important;inset:auto!important;float:none!important;transform:none!important;z-index:auto!important}
+[data-sk973-admin-tools] a{position:relative!important}
+@media(prefers-reduced-motion:reduce){[data-sk973-admin-tools] *{transition:none!important}}

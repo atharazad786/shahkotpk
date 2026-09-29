@@ -1,0 +1,8 @@
+<?php
+declare(strict_types=1);
+function growth_public_head(string $title,string $description='',string $active=''): void {?>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?=e($title)?> — <?=e(setting('site_name','ShahkotPK'))?></title><?php if($description):?><meta name="description" content="<?=e($description)?>"><?php endif;?><link rel="stylesheet" href="/assets/themes/landing/base.css?v=240"><link rel="stylesheet" href="/assets/growth-suite-3.5.0.css?v=350"></head><body class="growth-public"><header class="growth-public-header"><div class="lt-shell"><a class="growth-brand" href="/"><?=e(setting('site_name','ShahkotPK'))?><small>Commercial City Platform</small></a><nav class="growth-public-nav"><a href="/businesses.php">Businesses</a><a class="<?=$active==='food'?'active':''?>" href="/food.php">Food</a><a class="<?=$active==='services'?'active':''?>" href="/services.php">Services</a><a class="<?=$active==='classifieds'?'active':''?>" href="/classifieds.php">Classifieds</a><a class="<?=$active==='emergency'?'active':''?>" href="/emergency.php">Emergency</a><a class="<?=$active==='rewards'?'active':''?>" href="/rewards.php">Rewards</a><a href="/shop.php">Shop</a><a href="/news.php">News</a></nav></div></header>
+<?php }
+function growth_public_footer(): void {?><footer class="growth-public-footer"><div class="lt-shell"><b><?=e(setting('site_name','ShahkotPK'))?></b><p>Local businesses, services, commerce and city information in one place.</p><a href="/">Back to Homepage</a></div></footer></body></html><?php }
+
+

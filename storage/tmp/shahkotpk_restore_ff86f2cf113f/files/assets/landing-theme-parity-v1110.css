@@ -1,0 +1,97 @@
+/* ShahkotPK v11.1.0 — Landing Page Theme parity. Scoped to injected/enhanced surfaces. */
+.sk1110-search-wrap{position:relative;z-index:12;width:min(1180px,calc(100% - 32px));margin:18px auto}.sk1110-search-host{position:relative!important}.sk1110-search-host>.sk1110-search-wrap{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);margin:0}.sk1110-search{box-sizing:border-box;box-shadow:0 16px 45px rgba(15,35,70,.16)!important}.sk1110-parity-zone{background:#fff;position:relative;z-index:1}.sk1110-theme-section{font-family:inherit}.sk1110-theme-section .shp-shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}.sk1110-inline-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.sk1110-native-actions{display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin-top:14px!important;padding-top:12px!important;border-top:1px solid rgba(120,140,170,.2)!important}.sk1110-native-actions button,.sk1110-native-actions a{appearance:none!important;border:1px solid #d9e1ec!important;background:#fff!important;color:#38516f!important;border-radius:11px!important;padding:8px 11px!important;font:700 12px/1.1 inherit!important;text-decoration:none!important;cursor:pointer!important;white-space:nowrap!important}.sk1110-native-actions button:hover,.sk1110-native-actions a:hover{border-color:#8bb3ef!important;color:#1260d6!important}.sk1110-float{z-index:2147480000!important}.sk1110-float.sk1110-float-raised{transform:translateY(-72px)}
+@media(max-width:900px){.sk1110-search-host>.sk1110-search-wrap{position:relative;left:auto;bottom:auto;transform:none;margin:18px auto}.sk1110-search-wrap{width:min(100% - 20px,760px)}.sk1110-search{grid-template-columns:1fr!important}.sk1110-native-actions{gap:6px!important}.sk1110-native-actions button,.sk1110-native-actions a{padding:8px 9px!important}}
+@media(max-width:560px){.sk1110-theme-section .shp-shell{width:min(100% - 20px,1180px)}.sk1110-native-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}.sk1110-native-actions button,.sk1110-native-actions a{text-align:center!important;white-space:normal!important}}
+@media(prefers-reduced-motion:reduce){.sk1110-float{transition:none!important}}
+
+/* v11.1.5 — collision-safe visitor utility placement.
+   Desktop: anchored inside the CITY UPDATE / Welcome ticker bar.
+   Narrow screens/fallback: its own compact strip. AI chatbot is untouched. */
+.sk1020-float.sk1110-float{
+  z-index:2147480000!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:6px!important;
+  margin:0!important;
+  transform:none!important;
+}
+.sk1115-utility-host{
+  position:relative!important;
+  box-sizing:border-box!important;
+  padding-right:390px!important;
+  overflow:visible!important;
+}
+.sk1115-utility-host>.sk1020-float.sk1110-float{
+  position:absolute!important;
+  top:50%!important;
+  right:14px!important;
+  bottom:auto!important;
+  left:auto!important;
+  transform:translateY(-50%)!important;
+  width:auto!important;
+  max-width:370px!important;
+}
+.sk1115-utility-strip{
+  position:relative!important;
+  z-index:9999!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  min-height:42px!important;
+  padding:6px 12px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  background:#082b32!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+.sk1115-utility-strip>.sk1020-float.sk1110-float{
+  position:static!important;
+  inset:auto!important;
+  width:auto!important;
+  max-width:100%!important;
+}
+.sk1020-float.sk1110-float a,.sk1020-float.sk1110-float button{
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 10px!important;
+  border-radius:999px!important;
+  font-size:11px!important;
+  line-height:1!important;
+  box-shadow:0 4px 14px rgba(0,0,0,.14)!important;
+  white-space:nowrap!important;
+  margin:0!important;
+}
+.sk1110-float.sk1110-float-raised{transform:none!important}
+@media(max-width:1180px){
+  .sk1115-utility-host{padding-right:330px!important}
+  .sk1115-utility-host>.sk1020-float.sk1110-float{max-width:315px!important;gap:4px!important}
+  .sk1020-float.sk1110-float a,.sk1020-float.sk1110-float button{padding:0 8px!important;font-size:10px!important}
+}
+@media(max-width:900px){
+  .sk1115-utility-host{padding-right:0!important}
+  .sk1115-utility-strip{min-height:40px!important;padding:5px 9px!important}
+  .sk1020-float.sk1110-float{gap:5px!important}
+  .sk1020-float.sk1110-float a,.sk1020-float.sk1110-float button{height:30px!important;min-height:30px!important;padding:0 9px!important;font-size:10px!important}
+}
+@media(max-width:560px){
+  .sk1115-utility-strip{justify-content:center!important}
+  .sk1020-float.sk1110-float a,.sk1020-float.sk1110-float button{width:34px!important;height:32px!important;min-height:32px!important;padding:0!important}
+  .sk1020-float.sk1110-float .label{display:none!important}
+}
+
+
+/* v11.1.6 — global floating utility actions removed permanently to prevent overlap.
+   Card-level Save/Follow/Alert/Share/Compare/Q&A actions remain available. */
+[data-sk1110-float],
+.sk1020-float.sk1110-float,
+[data-sk1115-utility-strip]{display:none!important;visibility:hidden!important;pointer-events:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;overflow:hidden!important}
+.sk1115-utility-host{padding-right:0!important}
+
+/* v11.1.7 — native hero search wins; never stack a second Smart Search. */
+html[data-sk1117-search="native"] [data-sk1110-search]{display:none!important}
+[data-sk1117-native-search]{position:relative;z-index:13}

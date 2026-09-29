@@ -1,0 +1,1 @@
+(()=>{'use strict';document.addEventListener('click',e=>{const b=e.target.closest('[data-confirm]');if(b&&!confirm(b.dataset.confirm||'Are you sure?'))e.preventDefault();});const date=document.querySelector('input[type=date][name=preferred_date]');if(date&&!date.min)date.min=new Date().toISOString().slice(0,10);})();

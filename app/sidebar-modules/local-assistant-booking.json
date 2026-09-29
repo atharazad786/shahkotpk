@@ -1,0 +1,18 @@
+{
+  "module_key": "local_assistant_booking",
+  "label": "Assistant & Booking",
+  "url": "/admin/local-assistant-booking.php",
+  "icon": "\u2726",
+  "placement": "sidebar",
+  "category_key": "customer_services",
+  "category_label": "CUSTOMER & SERVICES",
+  "category_order": 45,
+  "subgroup_key": "customer_experience",
+  "subgroup_label": "Customer Experience",
+  "subgroup_order": 20,
+  "sort_order": 20,
+  "enabled": 1,
+  "permission": "settings.manage",
+  "source_version": "10.4.0",
+  "description": "Smart local search assistant, unified customer bookings, provider inbox and availability management."
+}

@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "security_integrity_v1310",
+      "label": "Security Integrity",
+      "url": "/admin/security-integrity.php",
+      "icon": "🔐",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 98,
+      "enabled": 1
+    }
+  ]
+}

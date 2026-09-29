@@ -1,0 +1,11 @@
+{
+  "name":"ShahkotPK City Super App",
+  "short_name":"ShahkotPK",
+  "start_url":"/app.php?source=pwa",
+  "scope":"/",
+  "display":"standalone",
+  "background_color":"#071521",
+  "theme_color":"#071521",
+  "description":"Multi-tenant city super app for education, transport, tourism, healthcare, commerce and citizen services.",
+  "icons":[{"src":"/assets/super-app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

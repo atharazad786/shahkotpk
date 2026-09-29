@@ -1,0 +1,256 @@
+{
+  "app": "ShahkotPK",
+  "version": "13.0.15.2",
+  "algorithm": "sha256",
+  "generated_at": "2026-08-30T13:15:00Z",
+  "files": [
+    {
+      "path": "about.php",
+      "sha256": "6dbd83f950dc3b89cf312cc0ddf001b2c92c3c7824155b007011d73308a37178"
+    },
+    {
+      "path": "admin/background-integrity.php",
+      "sha256": "87350dfb978ea8490007650847a2098d21217da6387955ac015229f6b2794e0f"
+    },
+    {
+      "path": "admin/data-consistency.php",
+      "sha256": "883d2425c396ae968632d386bd704273c6210f0bca0e55198d7090ef5fbb08c2"
+    },
+    {
+      "path": "admin/data-repair.php",
+      "sha256": "8305d3bf3305e55a50e6e7c0783147390f938274d40c56be3b143b9096bc1738"
+    },
+    {
+      "path": "admin/database-integrity.php",
+      "sha256": "e4129bd90d2767bea7513fd0973acf8eecf1f0cbaa71ac884fb1b7e72182e9b3"
+    },
+    {
+      "path": "admin/media-integrity.php",
+      "sha256": "0b93b784f3b2bfeee1f22d16ff28d172de31e5fa88ab24e541bcb416e43ed67a"
+    },
+    {
+      "path": "admin/module-linkage.php",
+      "sha256": "1d541fd2541b478e018fff4326de8855139012d908c448eeabe41834266469a9"
+    },
+    {
+      "path": "admin/permissions-integrity.php",
+      "sha256": "0beceefdaf15e9d4bfb159cc1bfc853387f8da134673287c76af6086a99a2afc"
+    },
+    {
+      "path": "admin/production-hardening.php",
+      "sha256": "5e68fabb7bcc8f99fb6243b1106946595e02472c2ae9226ebf3b31c8e3bafe4f"
+    },
+    {
+      "path": "admin/public-seo-routing.php",
+      "sha256": "80667c296877b864026f2e77b6b7b2093f7557d0d528f9847e4195f83125d5f5"
+    },
+    {
+      "path": "admin/regression-integrity.php",
+      "sha256": "5e4403c7ec1b26348c3f2839c29345342a50401e9e2ba0ad14b049dee3f347e5"
+    },
+    {
+      "path": "admin/runtime-integrity.php",
+      "sha256": "e2c73051bd51264c08d15669a0db1964fd1f6b5c4d1aae9ad633bb677385a71e"
+    },
+    {
+      "path": "admin/security-integrity.php",
+      "sha256": "4a2a4aad9eb36482a2c0f3c231602a2decd25b47157b62486123270f764bb13e"
+    },
+    {
+      "path": "admin/system-integrity.php",
+      "sha256": "b9bd0faa9ee089178de32aead3944fe1ddc0f6e94c9178f6314ed753e853d1c5"
+    },
+    {
+      "path": "app/access_control_v1300.php",
+      "sha256": "c6bc3ea777f34ed210b0e0af27cb454083d0973d227c4dbe110ca3a952498740"
+    },
+    {
+      "path": "app/admin_sidebar_global_v974.php",
+      "sha256": "8f783764a74244855b29e85f5687ec5c98b160a27977a82520fba623bead1f80"
+    },
+    {
+      "path": "app/admin_sidebar_native_modules_v1303.php",
+      "sha256": "8cb123233cf3b4fac4154a261c9814d99d0f2b4a6dde84587a534e9f7fce9b85"
+    },
+    {
+      "path": "app/background_integrity_v1313.php",
+      "sha256": "a95f30b08615512e89b662eb92f6e67476081ae99bfc5c77fb5fbd11845040f5"
+    },
+    {
+      "path": "app/data_consistency_v1305.php",
+      "sha256": "b40ef80beab839ee9a9d65f797f2b9c7b347194ae4adb5f3e6d82d5bbc45514c"
+    },
+    {
+      "path": "app/data_repair_v1306.php",
+      "sha256": "2edc9f23361ac9490a0febf067122be46f93aa7f2b7cb2163b5b296b3c55f189"
+    },
+    {
+      "path": "app/database_integrity_v1311.php",
+      "sha256": "acaedd1a61c3485d8b4f8f79657722dfcda3992b18a63d126ce283aec61ca479"
+    },
+    {
+      "path": "app/landing_sync_v1303.php",
+      "sha256": "c06b573537e9cd8d57dfd045c6d37b74e2527af4a51bd3664aed4971059f87e2"
+    },
+    {
+      "path": "app/linkage_integrity_v1304.php",
+      "sha256": "88416b2648e8a26b492bf6f78496ab9c576ec3c7a1a322abb1deb0d82ecdce23"
+    },
+    {
+      "path": "app/media_integrity_v1307.php",
+      "sha256": "65bc17f2c4ad02a179780e5e2b175d4697c24145f06f3e133e3bd12493c66538"
+    },
+    {
+      "path": "app/permissions_integrity_v1309.php",
+      "sha256": "9f7a23085a82f05ce1fea0175c99ee224b88605f962dc71efbac304c765fe0a1"
+    },
+    {
+      "path": "app/production_hardening_v1315.php",
+      "sha256": "88b9588cf564bfdbd3805a4d4f115b97cf05e281205eb3e723210907fd3b0bf9"
+    },
+    {
+      "path": "app/public_runtime_v1101.php",
+      "sha256": "b4684b4238031ae1ce48863df0a2e4d01c8e0c244fa80e2885a4820c714da924"
+    },
+    {
+      "path": "app/public_seo_routing_v1312.php",
+      "sha256": "615061f6b45558334942fd791db7856428c2c652f70f7ca4819350cd3c75a167"
+    },
+    {
+      "path": "app/regression_integrity_v1314.php",
+      "sha256": "c80fbf7d44648c16a9b46c78bb8aa404af0329b17e9667848b00d526d7a7992f"
+    },
+    {
+      "path": "app/runtime_integrity_v1308.php",
+      "sha256": "38bf3a7019aa4ca85805cfae7c22df7ca3d4e5696708a6df17e2098b707c0a46"
+    },
+    {
+      "path": "app/security_integrity_v1310.php",
+      "sha256": "94d19a2a14601a741e359d6a68ea0ac607ff6c7b2a1086cb293117bb039876d1"
+    },
+    {
+      "path": "app/session_security_v13151.php",
+      "sha256": "31e6aeaca306c2e4f43624d7b2f428c5229a0d41b9f48ef788798f4f4737c4f9"
+    },
+    {
+      "path": "app/sidebar-modules/background-integrity-v1313.json",
+      "sha256": "73b0e32335816420b5f63b9b209a2c6b0162503a1c265190d649f23e0a826659"
+    },
+    {
+      "path": "app/sidebar-modules/data-consistency-v1305.json",
+      "sha256": "65f8cfc0f16bfbbef67132402b0336abae779c3223165e6072a9b57d9c69d9da"
+    },
+    {
+      "path": "app/sidebar-modules/data-repair-v1306.json",
+      "sha256": "948ef21a1f855ee68b09630cac933c78ac02b83ef5e4a74492a53200ac076069"
+    },
+    {
+      "path": "app/sidebar-modules/database-integrity-v1311.json",
+      "sha256": "5892306aa956050f93b8722b122f9848dd7b5feda5173bd2489385c11f8fb053"
+    },
+    {
+      "path": "app/sidebar-modules/media-integrity-v1307.json",
+      "sha256": "263cbc9b9c7c96eba748a15c8de60193b25616b88e9b8b26a68bdea764398ae2"
+    },
+    {
+      "path": "app/sidebar-modules/module-linkage-v1304.json",
+      "sha256": "07aa2087e9dc02c14dcca06b4f73329ca5a0cca4cafb9306ba176db857c04e89"
+    },
+    {
+      "path": "app/sidebar-modules/permissions-integrity-v1309.json",
+      "sha256": "724fbc0c84e7f425dbadd752d4b0e081e8687051445c2de1c644d67147e93f25"
+    },
+    {
+      "path": "app/sidebar-modules/production-hardening-v1315.json",
+      "sha256": "88ba060fbecfd1be6e43a1ef449f99be43161b5cb412801d30d0d6ddd4846e6f"
+    },
+    {
+      "path": "app/sidebar-modules/public-seo-routing-v1312.json",
+      "sha256": "044cc80e53963cc4b0e0f3e5bb4c5803d64364c219500a7cee8c4c31e33d0797"
+    },
+    {
+      "path": "app/sidebar-modules/regression-integrity-v1314.json",
+      "sha256": "6dab740e890b00e986c7a1378860ebb670bd2f3bf00ee1be1db38398f582ef3d"
+    },
+    {
+      "path": "app/sidebar-modules/runtime-integrity-v1308.json",
+      "sha256": "14b7e8cb862665350815f6dd490d76c0caa669c0688ad1029326e113a00c5979"
+    },
+    {
+      "path": "app/sidebar-modules/security-integrity-v1310.json",
+      "sha256": "07876738033bae04464c9c62429aba92ee68c3b7a167190465bb9b0d057a3c1e"
+    },
+    {
+      "path": "assets/admin-dashboard-sync-v1302.css",
+      "sha256": "fd4463e8bc9b60b942e343aa9ee17884e75de8f57817e094e8b9a7ca9a2771d2"
+    },
+    {
+      "path": "assets/admin-dashboard-sync-v1302.js",
+      "sha256": "45ba0fdd7f4fd7457babe5420f69a519a0438717ba1c9fd335198ad3455b0d64"
+    },
+    {
+      "path": "assets/admin-native-module-restore-v1303.css",
+      "sha256": "3f4c11040405ecf8277df50abdceba1ad584a83221442b8f7e53c8d8fed1b9d5"
+    },
+    {
+      "path": "assets/admin-native-module-restore-v1303.js",
+      "sha256": "df62ce76c468b05dcca42fe165c4b39d2aaeac5aa40d025d0e41aa50f0f03172"
+    },
+    {
+      "path": "assets/admin-shell-stability-v1303.css",
+      "sha256": "66e6a861f99a8778ba8985026d18aa28f3bacca1868105b9ce498d61241e318c"
+    },
+    {
+      "path": "assets/admin-shell-stability-v1303.js",
+      "sha256": "b5034859e967691d6802f653c3d52a28bb2086d83e7cf3344f921c653211b7bf"
+    },
+    {
+      "path": "assets/core-sync-v1301.css",
+      "sha256": "0910089af853dffe701f1ad2a25e8f600934d507c909f1d53b40aa6eb31984e6"
+    },
+    {
+      "path": "assets/core-sync-v1301.js",
+      "sha256": "69d99463ab780719f95e67b2e449e0de541fe5a20096274017b1931f146dff35"
+    },
+    {
+      "path": "assets/landing-section-sync-v1303.css",
+      "sha256": "d401fc7a99aadae53e6625ccec878d810049b4fc6d9041b79394f3ec93ed36f9"
+    },
+    {
+      "path": "assets/landing-section-sync-v1303.js",
+      "sha256": "9888d3053d96cfafd35ce1f566eccff1790506d284f8731bdbbf1367066c42cc"
+    },
+    {
+      "path": "assets/public-header-sync-v1302.css",
+      "sha256": "8843eac2fb269288c63a5ef1858bf8a9ff1ccd36fd281682ba82231545053ee1"
+    },
+    {
+      "path": "assets/public-header-sync-v1302.js",
+      "sha256": "0f4a3a126a9ea3a5f4147a0b499bdb4c2cd11c2edad3c6c6681bb9904b496b94"
+    },
+    {
+      "path": "blood-donors.php",
+      "sha256": "cdb0c8e2db1e51a0d2dbe72f67dd220f101c6bf1ec0e184aa4c02bd2f65ca9a0"
+    },
+    {
+      "path": "contact.php",
+      "sha256": "92a777e2afb8b77edfe8a2e49ef0c547fd44dbc77a32e68fbfae91417c4defa0"
+    },
+    {
+      "path": "doctors.php",
+      "sha256": "03ac26baba92eb17633331c01f6bc41fef84ecf8559cc743ba5c58bf7916d8e7"
+    },
+    {
+      "path": "marketplace.php",
+      "sha256": "fbdc29b6c1d5f3a1bcdb188953c5233e56d4cdf4e0b8669236c678859bd5747d"
+    },
+    {
+      "path": "robots.txt",
+      "sha256": "e138c8900ba4a729b41b37d0aa51d24c8c8beea3bba0460905ee03169f97449e"
+    },
+    {
+      "path": "sitemap.php",
+      "sha256": "6e59e137f8025cf69b32751ea92dfc25c3904cb8b3f1c969cbdf482c9b4d8a71"
+    }
+  ]
+}

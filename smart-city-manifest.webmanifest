@@ -1,0 +1,18 @@
+{
+  "name": "ShahkotPK Smart City Citizen Super App",
+  "short_name": "ShahkotPK",
+  "start_url": "/smart-city.php?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07151d",
+  "theme_color": "#07151d",
+  "description": "Citizen services, healthcare, marketplace, property, wallet and smart discovery in one ShahkotPK app.",
+  "icons": [
+    {
+      "src": "/assets/smart-city-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "module_key": "background_integrity_v1313",
+      "label": "Background Jobs Integrity",
+      "url": "/admin/background-integrity.php",
+      "icon": "⏱️",
+      "placement": "sidebar",
+      "category_key": "admin",
+      "category_label": "ADMIN",
+      "category_order": 90,
+      "sort_order": 110,
+      "enabled": 1
+    }
+  ]
+}

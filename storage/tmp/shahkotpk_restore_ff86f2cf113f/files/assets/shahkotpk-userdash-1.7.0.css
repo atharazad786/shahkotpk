@@ -1,0 +1,134 @@
+
+/* ShahkotPK User Dashboards v1.7.0 */
+.dashboard-page{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top left, rgba(44,163,106,.10), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(23,107,70,.08), transparent 24%),
+    linear-gradient(180deg,#f7fbf8,#eef5f0);
+}
+.dash-shell{max-width:1280px;margin:0 auto;padding:24px}
+.dash-topbar{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+  margin-bottom:20px;flex-wrap:wrap
+}
+.dash-back{
+  text-decoration:none;font-weight:850;color:var(--green);
+  display:inline-flex;align-items:center;gap:8px
+}
+.dash-actions{display:flex;gap:10px;flex-wrap:wrap}
+.dash-chip{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;
+  background:#fff;border:1px solid #dfe9e2;font-size:13px;font-weight:800;color:#355245
+}
+.dash-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0f3f2a,#176b46 60%,#2ca36a);
+  color:#fff;border-radius:30px;padding:34px;box-shadow:0 22px 58px rgba(15,43,30,.15)
+}
+.dash-hero:after{
+  content:"";position:absolute;width:320px;height:320px;border-radius:50%;
+  right:-110px;top:-130px;background:rgba(255,255,255,.10)
+}
+.dash-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:end}
+.dash-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.20);background:rgba(255,255,255,.10);font-size:12px;font-weight:850
+}
+.dash-hero h1{font-size:clamp(34px,5vw,52px);line-height:1.03;letter-spacing:-.04em;margin:16px 0 10px}
+.dash-hero p{margin:0;color:#e6f4ea;font-size:16px;max-width:720px}
+.dash-hero-side{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+.dash-mini-stat{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;padding:16px
+}
+.dash-mini-stat strong{display:block;font-size:28px;line-height:1;font-weight:900}
+.dash-mini-stat span{display:block;margin-top:7px;color:#e4f4e9;font-size:12px}
+.dash-stats-grid{
+  margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px
+}
+.dash-stat{
+  background:#fff;border:1px solid #e3ebe5;border-radius:20px;padding:18px;
+  box-shadow:0 10px 26px rgba(17,46,31,.05)
+}
+.dash-stat-label{font-size:12px;font-weight:800;color:#6a7c72}
+.dash-stat-number{font-size:30px;font-weight:900;line-height:1.05;margin:8px 0 4px;color:#143028}
+.dash-stat-note{font-size:12px;color:#7a8a82}
+.dash-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:18px}
+.dash-card{
+  background:#fff;border:1px solid #e4ece6;border-radius:24px;padding:24px;
+  box-shadow:0 14px 36px rgba(17,46,31,.06)
+}
+.dash-card h2{margin:0 0 8px;font-size:26px;letter-spacing:-.03em}
+.dash-card h3{margin:0 0 12px;font-size:20px}
+.dash-card p{color:#6f8177}
+.dash-section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.dash-profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dash-field label{display:block;margin-bottom:7px;font-size:13px;font-weight:800;color:#294438}
+.dash-input,.dash-textarea,.dash-select{
+  width:100%;border:1px solid #d4e0d7;background:#fbfdfb;border-radius:14px;
+  padding:14px 15px;font:inherit;color:#173228;outline:none
+}
+.dash-input:focus,.dash-textarea:focus,.dash-select:focus{border-color:#92c9ab;box-shadow:0 0 0 4px rgba(23,107,70,.10);background:#fff}
+.dash-textarea{min-height:110px;resize:vertical}
+.dash-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:48px;padding:0 18px;border-radius:14px;border:none;cursor:pointer;
+  text-decoration:none;font-weight:850
+}
+.dash-btn.primary{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;box-shadow:0 12px 28px rgba(23,107,70,.14)}
+.dash-btn.soft{background:#eef6f1;color:#176b46}
+.dash-btn.dark{background:#153727;color:#fff}
+.dash-btn-line{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.dash-list{display:grid;gap:12px}
+.dash-item{
+  display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+  border:1px solid #e6ede8;border-radius:18px;padding:15px;background:#fbfdfb
+}
+.dash-item-icon{
+  width:44px;height:44px;border-radius:14px;background:#e9f5ee;
+  color:#176b46;display:grid;place-items:center;font-weight:900
+}
+.dash-item strong{display:block;margin-bottom:3px}
+.dash-item span{display:block;color:#74867c;font-size:13px}
+.dash-badge-pill{
+  display:inline-flex;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:850
+}
+.dash-badge-pill.success{background:#e8f7ee;color:#176b46}
+.dash-badge-pill.warning{background:#fff5db;color:#a46400}
+.dash-badge-pill.info{background:#e8f0ff;color:#1d4ed8}
+.dash-badge-pill.danger{background:#fee9e9;color:#b42318}
+.dash-empty{
+  padding:22px;text-align:center;border:1px dashed #d2ddd5;border-radius:18px;background:#fbfdfb;color:#6f8177
+}
+.dash-table-wrap{overflow:auto}
+.dash-table{width:100%;border-collapse:collapse}
+.dash-table th,.dash-table td{padding:12px 10px;border-bottom:1px solid #edf2ee;text-align:left;vertical-align:top}
+.dash-table th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#73857a;background:#f8fbf9}
+.dash-highlight{
+  padding:16px 18px;border-radius:18px;background:#f4faf6;border:1px solid #e0ebe3;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap
+}
+.dash-help{
+  margin-top:18px;padding:18px;border-radius:18px;background:#f8fbf9;border:1px solid #e6eee8
+}
+.auth-inline-link{display:flex;justify-content:flex-end;margin-top:8px}
+.auth-inline-link a{color:var(--green);text-decoration:none;font-weight:800;font-size:13px}
+.auth-success-box{
+  margin-top:14px;padding:14px 16px;background:#eef8f1;border:1px solid #d8ebde;border-radius:16px
+}
+.auth-success-box code{
+  display:block;margin-top:8px;padding:10px 12px;background:#fff;border:1px solid #dbe9e0;border-radius:12px;overflow:auto
+}
+@media(max-width:1020px){
+  .dash-hero-grid,.dash-grid{grid-template-columns:1fr}
+  .dash-stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .dash-shell{padding:18px 16px 28px}
+  .dash-hero,.dash-card{padding:22px}
+  .dash-stats-grid,.dash-profile-grid,.dash-hero-side{grid-template-columns:1fr}
+  .dash-item{grid-template-columns:1fr}
+}
