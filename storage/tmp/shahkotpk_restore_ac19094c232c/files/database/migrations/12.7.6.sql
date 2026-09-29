@@ -1,3 +1,0 @@
--- ShahkotPK v12.7.6 — import constraint hotfix
--- No schema changes are required. Runtime import logic now resolves Shahkot city_id
--- and uses NULL for optional blank contact fields when the installed schema permits it.

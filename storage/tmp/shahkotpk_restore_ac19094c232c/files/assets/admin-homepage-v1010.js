@@ -1,1 +1,0 @@
-document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.hb-deploy form').forEach(f=>f.addEventListener('submit',e=>{const i=f.querySelector('input[name=confirm]');if(i&&!i.value.trim())e.preventDefault()}));});

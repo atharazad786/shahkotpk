@@ -1,4 +1,0 @@
-Options -Indexes
-<FilesMatch \"\.(zip|sql|json|log)$\">
-Require all denied
-</FilesMatch>

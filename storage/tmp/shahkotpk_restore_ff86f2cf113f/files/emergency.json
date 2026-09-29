@@ -1,9 +1,0 @@
-{
-  "app": "ShahkotPK",
-  "version": "9.0.2-emergency",
-  "package_type": "cpanel_extract_recovery",
-  "base": "9.0.0/9.0.1",
-  "database_migrations": "none",
-  "preserve": ["config/", "storage/", "uploads/"],
-  "notes": "Emergency shared-shell rollback + worker pause + standalone diagnostics."
-}

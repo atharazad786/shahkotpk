@@ -1,2 +1,0 @@
-<?php
-declare(strict_types=1);require __DIR__.'/../app/bootstrap.php';require_once __DIR__.'/../app/business_microsite_v1130.php';$s=sk1130_settings();if(empty($s['enabled'])||empty($s['ai_auto_refresh'])){echo "Business microsite AI auto-refresh disabled.\n";exit;}$r=sk1130_generate_stale_batch((int)($s['ai_batch_size']??3));echo json_encode($r,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)."\n";

@@ -1,1 +1,0 @@
-<?php require __DIR__.'/../../app/bootstrap.php';require_once __DIR__.'/../../app/api_v1.php';api_json(['ok'=>true,'app'=>'ShahkotPK','api'=>'v1','endpoints'=>['POST auth.php','POST verify.php','GET me.php','GET catalog.php','GET search.php?q=','GET orders.php','GET/POST pos.php']]);

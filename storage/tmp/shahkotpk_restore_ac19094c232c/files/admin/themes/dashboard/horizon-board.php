@@ -1,6 +1,0 @@
-<?php require __DIR__.'/../../../app/layout.php';page_start('Horizon Board',true);render_ticker('admin');?>
-<section class="horizon-head"><div><span>PANORAMIC ADMIN BOARD</span><h2>ShahkotPK Horizon</h2><p>A wide analytics canvas designed for large-screen operations.</p></div><div class="horizon-scores"><b><?=e($totalUsers)?></b><span>Users</span><b><?=e($totalBusinesses)?></b><span>Businesses</span><b>Rs <?=e(number_format($recordedRevenue,0))?></b><span>Revenue</span></div></section>
-<div class="at-panel horizon-chart"><div class="at-panel-head"><div><h3>Growth Horizon</h3><span>Six-month business and user movement</span></div></div><?php at_growth_chart($months,'horizon');?></div>
-<section class="horizon-strip"><?php at_metric_cards(array_slice($metrics,0,8),'horizon',8);?></section>
-<section class="horizon-lower"><div class="at-panel"><?php at_custom_widgets($customWidgets);?></div><div class="at-panel"><?php at_activity($activity);?></div><div class="at-panel"><?php at_quick_actions($quickActions,'horizon');?></div></section>
-<?php require __DIR__.'/../../../app/end.php';?>

@@ -1,7 +1,0 @@
-<?php require __DIR__.'/../../../app/layout.php';page_start('Midnight Operations',true);render_ticker('admin');?>
-<section class="ops-console"><div class="ops-title"><i></i><span>SHAHKOTPK / OPERATIONS / LIVE</span><h2>Midnight Operations Center</h2></div><div class="ops-clock"><?=date('H:i:s')?><small>PKT</small></div></section>
-<section class="ops-status"><?php foreach(array_slice($metrics,0,8) as $m):?><div><span><?=e($m['label'])?></span><b><?=e($m['value'])?></b><small><?=e($m['note'])?></small></div><?php endforeach;?></section>
-<section class="ops-grid"><div class="at-panel ops-radar"><div class="at-panel-head"><div><h3>Growth Radar</h3><span>6-month signal</span></div></div><?php at_growth_chart($months,'radar');?></div><div class="at-panel"><div class="at-panel-head"><div><h3>Health Signals</h3><span>System state</span></div></div><?php at_health($health,'console');?></div></section>
-<section class="ops-grid"><div class="at-panel"><?php at_quick_actions($quickActions,'console');?></div><div class="at-panel"><div class="at-panel-head"><div><h3>Event Stream</h3><span>Recent platform activity</span></div></div><?php at_activity($activity);?></div></section>
-<div class="at-panel"><div class="at-panel-head"><div><h3>Custom Ops Widgets</h3><span>Drag/drop widgets remain available</span></div><a href="/admin/widgets.php">Configure ↗</a></div><?php at_custom_widgets($customWidgets);?></div>
-<?php require __DIR__.'/../../../app/end.php';?>

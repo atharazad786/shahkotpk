@@ -1,0 +1,5 @@
+storage/tmp/
+storage/backups/
+storage/updates/
+*.zip
+

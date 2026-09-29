@@ -1,9 +1,0 @@
-{
-  "app": "ShahkotPK",
-  "version": "9.0.1",
-  "min_version": "8.0.0",
-  "package_type": "update",
-  "database_migrations": "automatic",
-  "notes": "v9.0.1 stability and HTTP 500 recovery release. Reinstalls the complete v9.0 application delta safely, separates the legacy v8 cron from the new v9 worker, adds non-overlapping worker locks, caps worker batches/runtime, and throttles expensive periodic sweeps. Existing tenants, users, business data, settings, uploads, branding and API credentials are preserved.",
-  "preserve": ["config/config.php", "storage/", "uploads/"]
-}

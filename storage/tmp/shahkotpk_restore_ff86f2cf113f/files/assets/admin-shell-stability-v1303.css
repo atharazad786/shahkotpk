@@ -1,7 +1,0 @@
-/* v13.0.3.4 — native sidebar layout is preserved; only scrolling/dock overlap is stabilized. */
-html.sk13034-admin-shell .sk13034-sidebar-scroll{min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain!important;scroll-padding-bottom:var(--sk13034-dock-height,96px)!important}
-html.sk13034-admin-shell .sk13034-user-dock{position:sticky!important;bottom:0!important;top:auto!important;z-index:30!important;max-width:100%!important;transform:none!important;background:inherit!important}
-html.sk13034-admin-shell .sk13034-user-dock *{box-sizing:border-box!important;max-width:100%!important}
-html.sk13034-admin-shell .sk13034-legacy-sidebar-duplicate{display:none!important}
-html.sk13034-admin-shell #sk1303-restored-modules{position:relative!important;z-index:1!important;clear:both!important}
-@media(max-width:680px){html.sk13034-admin-shell .sk13034-user-dock{max-height:104px!important}}

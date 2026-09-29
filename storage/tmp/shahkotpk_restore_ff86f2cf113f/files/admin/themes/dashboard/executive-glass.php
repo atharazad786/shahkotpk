@@ -1,7 +1,0 @@
-<?php require __DIR__.'/../../../app/layout.php';page_start('Executive Glass Board',true);render_ticker('admin');?>
-<section class="at-executive-head"><div><span>EXECUTIVE OVERVIEW</span><h2><?=e(setting('site_name','ShahkotPK'))?> Performance Board</h2><p>A transparent executive dashboard focused on trends, quality and revenue.</p></div><div class="at-executive-kpis"><b>Rs <?=e(number_format($recordedRevenue,0))?></b><span>Recorded Revenue</span></div></section>
-<section class="at-glass-row"><?php at_metric_cards(array_slice($metrics,0,6),'glass',6);?></section>
-<section class="at-three"><div class="at-panel glass"><?php at_growth_chart($months,'line');?></div><div class="at-panel glass"><?php at_health($health,'rings');?></div><div class="at-panel glass"><div class="at-panel-head"><div><h3>Live Activity</h3><span>Latest platform events</span></div></div><?php at_activity($activity);?></div></section>
-<section class="at-panel glass"><div class="at-panel-head"><div><h3>Executive Shortcuts</h3><span>Direct navigation</span></div></div><?php at_quick_actions($quickActions,'executive');?></section>
-<section class="at-panel glass"><div class="at-panel-head"><div><h3>Custom Management Widgets</h3><span>Your configurable dashboard cards</span></div><a href="/admin/widgets.php">Customize ↗</a></div><?php at_custom_widgets($customWidgets);?></section>
-<?php require __DIR__.'/../../../app/end.php';?>

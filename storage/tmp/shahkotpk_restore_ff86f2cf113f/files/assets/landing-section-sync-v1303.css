@@ -1,4 +1,0 @@
-/* v13.0.3.4 — conservative landing visibility/order sync. */
-html.sk1303-landing-sync [data-sk1303-hidden="1"]{display:none!important}
-html.sk1303-landing-sync [data-sk1303-section]{box-sizing:border-box;scroll-margin-top:92px}
-@media(max-width:760px){html.sk1303-landing-sync main>[data-sk1303-section]{max-width:100%;overflow-x:clip}}

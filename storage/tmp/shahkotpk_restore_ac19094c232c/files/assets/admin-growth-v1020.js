@@ -1,1 +1,0 @@
-(()=>{'use strict';document.querySelectorAll('[data-confirm-text]').forEach(f=>f.addEventListener('submit',e=>{const x=f.querySelector('[name=confirm]');if(!x||x.value!==f.dataset.confirmText){e.preventDefault();alert('Type '+f.dataset.confirmText+' exactly.')}}))})();

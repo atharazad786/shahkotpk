@@ -1,7 +1,0 @@
-<?php
-declare(strict_types=1);
-require __DIR__.'/../app/bootstrap.php';
-require_once __DIR__.'/../app/business_source_import_v1270.php';
-header('Content-Type: application/json; charset=utf-8');
-$me=current_user();if(!$me||!(has_permission('businesses.manage',$me)||has_permission('settings.manage',$me))){http_response_code(403);echo json_encode(['ok'=>false,'error'=>'Forbidden']);exit;}
-try{$action=(string)($_GET['action']??'detail');if($action==='detail'){$id=(int)($_GET['id']??0);$r=bs1270_live_candidate($id);$g=$r['google'];$a=$g['photos'][0]['authorAttributions'][0]??[];echo json_encode(['ok'=>true,'candidate_id'=>$id,'name'=>(string)($g['displayName']['text']??''),'address'=>(string)($g['formattedAddress']??''),'phone'=>(string)($g['nationalPhoneNumber']??''),'type'=>(string)($g['primaryType']??''),'google_maps_uri'=>(string)($g['googleMapsUri']??''),'website_verified'=>!empty($r['website']['verified']),'confidence'=>(int)$r['confidence'],'distance_m'=>(int)$r['geo']['distance_m'],'shahkot_ok'=>!empty($r['geo']['ok']),'photo_url'=>!empty($g['photos'])?('/api/business-source-photo-v1270.php?place_id='.rawurlencode((string)$g['id']).'&index=0'):'','photo_author'=>(string)($a['displayName']??''),'photo_author_uri'=>(string)($a['uri']??'')],JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);exit;}throw new RuntimeException('Unknown action.');}catch(Throwable $e){http_response_code(400);echo json_encode(['ok'=>false,'error'=>$e->getMessage()],JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);}

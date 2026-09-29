@@ -1,1 +1,0 @@
-(()=>{'use strict';const els=[...document.querySelectorAll('.shp-reveal')];if(!('IntersectionObserver'in window)){els.forEach(x=>x.classList.add('is-visible'));return;}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{rootMargin:'80px 0px',threshold:.06});els.forEach(x=>io.observe(x));})();
